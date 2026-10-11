@@ -1,23 +1,25 @@
 (function () {
   var root = document.documentElement;
 
-  // Language: the head script picks the initial language; buttons switch it in place.
-  function setLang(lang) {
+  // Language: the head script picks the browser's language unless the URL names one; the buttons switch
+  // in place and record the choice in the URL, so a reload or a shared link keeps it.
+  function setLang(lang, record) {
     root.dataset.lang = lang;
     root.lang = lang === "zh" ? "zh-CN" : "en";
     document.title = root.dataset[lang === "zh" ? "titleZh" : "titleEn"];
     document.querySelectorAll("[data-set-lang]").forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.dataset.setLang === lang));
     });
-    try { localStorage.setItem("lang", lang); } catch (e) {}
-    var url = new URL(location.href);
-    url.searchParams.set("lang", lang);
-    history.replaceState(null, "", url);
+    if (record) {
+      var url = new URL(location.href);
+      url.searchParams.set("lang", lang);
+      history.replaceState(null, "", url);
+    }
   }
   document.querySelectorAll("[data-set-lang]").forEach(function (b) {
-    b.addEventListener("click", function () { setLang(b.dataset.setLang); });
+    b.addEventListener("click", function () { setLang(b.dataset.setLang, true); });
   });
-  setLang(root.dataset.lang);
+  setLang(root.dataset.lang, false);
 
   // Section index: mark the section that currently occupies the upper part of the viewport.
   var links = {};
@@ -169,6 +171,18 @@
     var panelGroup = flowFig.querySelector(".flow-panel");
     panelGroup.addEventListener("pointerenter", warm);
     panelGroup.addEventListener("focusin", warm);
+    // Once the first video has finished or paused its download, fetch the second one so the first
+    // switch is immediate. A cached video may be loaded before this script runs, so playback checks too.
+    var loadEvents = ["suspend", "canplaythrough", "timeupdate"];
+    var afterFirst = function () {
+      if (vids.mit.readyState < 3 || vids.mit.networkState === vids.mit.NETWORK_LOADING) return;
+      loadEvents.forEach(function (e) { vids.mit.removeEventListener(e, afterFirst); });
+      warm();
+    };
+    if (!(navigator.connection && navigator.connection.saveData)) {
+      loadEvents.forEach(function (e) { vids.mit.addEventListener(e, afterFirst); });
+      afterFirst();
+    }
     label();
   }
 

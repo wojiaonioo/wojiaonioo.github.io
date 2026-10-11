@@ -11,11 +11,10 @@
   <link rel="stylesheet" href="style.css">
   <script>
     (function () {
-      var q = new URLSearchParams(location.search).get("lang"), s = null;
-      try { s = localStorage.getItem("lang"); } catch (e) {}
-      var l = q === "zh" || q === "en" ? q
-        : s === "zh" || s === "en" ? s
-        : (navigator.language || "").toLowerCase().indexOf("zh") === 0 ? "zh" : "en";
+      // ?lang= (set when a visitor switches language) wins; otherwise the browser's first language.
+      var q = new URLSearchParams(location.search).get("lang");
+      var b = ((navigator.languages && navigator.languages[0]) || navigator.language || "").toLowerCase();
+      var l = q === "zh" || q === "en" ? q : b.indexOf("zh") === 0 ? "zh" : "en";
       var h = document.documentElement;
       h.dataset.lang = l;
       h.lang = l === "zh" ? "zh-CN" : "en";
@@ -64,10 +63,16 @@
             github.com/wojiaonioo
           </a>
         </li>
-        <li>
+        <li lang="zh-CN">
           <a href="assets/tanghaoyang-cv.pdf">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6m-2.5-2.5L12 17l2.5-2.5"/></svg>
-            <span lang="zh-CN">简历 PDF</span><span lang="en">CV (PDF, in Chinese)</span>
+            简历 PDF
+          </a>
+        </li>
+        <li lang="en">
+          <a href="assets/tanghaoyang-cv-en.pdf">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6m-2.5-2.5L12 17l2.5-2.5"/></svg>
+            CV (PDF)
           </a>
         </li>
       </ul>
