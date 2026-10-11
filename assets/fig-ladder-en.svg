@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" font-family="-apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif" role="img"><title>MITgcm rank ladder against TorchOcean on two GPUs</title>
+<line x1="70.0" x2="732.0" y1="329.7" y2="329.7" stroke="#e8edef"/>
+<text x="60.0" y="334.2" font-size="13" fill="#55646c" text-anchor="end" font-weight="400">0.1</text>
+<line x1="70.0" x2="732.0" y1="248.6" y2="248.6" stroke="#e8edef"/>
+<text x="60.0" y="253.2" font-size="13" fill="#55646c" text-anchor="end" font-weight="400">0.2</text>
+<line x1="70.0" x2="732.0" y1="141.4" y2="141.4" stroke="#e8edef"/>
+<text x="60.0" y="146.0" font-size="13" fill="#55646c" text-anchor="end" font-weight="400">0.5</text>
+<line x1="70.0" x2="732.0" y1="60.3" y2="60.3" stroke="#e8edef"/>
+<text x="60.0" y="64.9" font-size="13" fill="#55646c" text-anchor="end" font-weight="400">1</text>
+<line x1="70.0" x2="732.0" y1="342.0" y2="342.0" stroke="#c9d2d6"/>
+<line x1="132.5" x2="132.5" y1="342.0" y2="347.0" stroke="#c9d2d6"/>
+<text x="132.5" y="364.0" font-size="13" fill="#55646c" text-anchor="middle" font-weight="400">200</text>
+<line x1="288.5" x2="288.5" y1="342.0" y2="347.0" stroke="#c9d2d6"/>
+<text x="288.5" y="364.0" font-size="13" fill="#55646c" text-anchor="middle" font-weight="400">300</text>
+<line x1="399.2" x2="399.2" y1="342.0" y2="347.0" stroke="#c9d2d6"/>
+<text x="399.2" y="364.0" font-size="13" fill="#55646c" text-anchor="middle" font-weight="400">400</text>
+<line x1="555.2" x2="555.2" y1="342.0" y2="347.0" stroke="#c9d2d6"/>
+<text x="555.2" y="364.0" font-size="13" fill="#55646c" text-anchor="middle" font-weight="400">600</text>
+<line x1="665.9" x2="665.9" y1="342.0" y2="347.0" stroke="#c9d2d6"/>
+<text x="665.9" y="364.0" font-size="13" fill="#55646c" text-anchor="middle" font-weight="400">800</text>
+<text x="401.0" y="390.0" font-size="13" fill="#55646c" text-anchor="middle" font-weight="400">CPU cores used by MITgcm (MPI ranks)</text>
+<text x="18.0" y="30.0" font-size="13" fill="#55646c" text-anchor="start" font-weight="400">Computation time per step (s)</text>
+<polyline points="132.5,78.9 399.2,229.0 469.4,257.4 539.5,273.5 625.3,297.4 650.2,302.8 665.9,293.7" fill="none" stroke="#8a9aa2" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="132.5" cy="78.9" r="3.6" fill="#fff" stroke="#8a9aa2" stroke-width="2"/>
+<circle cx="399.2" cy="229.0" r="3.6" fill="#fff" stroke="#8a9aa2" stroke-width="2"/>
+<circle cx="469.4" cy="257.4" r="3.6" fill="#fff" stroke="#8a9aa2" stroke-width="2"/>
+<circle cx="539.5" cy="273.5" r="3.6" fill="#fff" stroke="#8a9aa2" stroke-width="2"/>
+<circle cx="625.3" cy="297.4" r="3.6" fill="#fff" stroke="#8a9aa2" stroke-width="2"/>
+<circle cx="650.2" cy="302.8" r="3.6" fill="#fff" stroke="#8a9aa2" stroke-width="2"/>
+<circle cx="665.9" cy="293.7" r="3.6" fill="#fff" stroke="#8a9aa2" stroke-width="2"/>
+<text x="144.5" y="68.9" font-size="13" fill="#55646c" text-anchor="start" font-weight="600">MITgcm, CPU</text>
+<polyline points="70.0,274.2 732.0,274.2" fill="none" stroke="#0a5c86" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<text x="78.0" y="264.2" font-size="13" fill="#0a5c86" text-anchor="start" font-weight="600">TorchOcean, two A800 GPUs  0.161 s</text>
+<circle cx="539.5" cy="273.5" r="8" fill="none" stroke="#0f1d24" stroke-width="1.4"/>
+<text x="525.5" y="299.5" font-size="13" fill="#0f1d24" text-anchor="end" font-weight="600">MITgcm, 576 cores  0.162 s</text>
+</svg>

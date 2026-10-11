@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 420" font-family="-apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif" role="img"><title>MITgcm 核数阶梯与 TorchOcean 双卡耗时</title>
+<line x1="46.0" x2="426.0" y1="345.0" y2="345.0" stroke="#e8edef"/>
+<text x="36.0" y="350.3" font-size="15" fill="#55646c" text-anchor="end" font-weight="400">0.1</text>
+<line x1="46.0" x2="426.0" y1="259.6" y2="259.6" stroke="#e8edef"/>
+<text x="36.0" y="264.8" font-size="15" fill="#55646c" text-anchor="end" font-weight="400">0.2</text>
+<line x1="46.0" x2="426.0" y1="146.7" y2="146.7" stroke="#e8edef"/>
+<text x="36.0" y="151.9" font-size="15" fill="#55646c" text-anchor="end" font-weight="400">0.5</text>
+<line x1="46.0" x2="426.0" y1="61.2" y2="61.2" stroke="#e8edef"/>
+<text x="36.0" y="66.5" font-size="15" fill="#55646c" text-anchor="end" font-weight="400">1</text>
+<line x1="46.0" x2="426.0" y1="358.0" y2="358.0" stroke="#c9d2d6"/>
+<line x1="81.9" x2="81.9" y1="358.0" y2="363.0" stroke="#c9d2d6"/>
+<text x="81.9" y="382.0" font-size="15" fill="#55646c" text-anchor="middle" font-weight="400">200</text>
+<line x1="235.0" x2="235.0" y1="358.0" y2="363.0" stroke="#c9d2d6"/>
+<text x="235.0" y="382.0" font-size="15" fill="#55646c" text-anchor="middle" font-weight="400">400</text>
+<line x1="388.0" x2="388.0" y1="358.0" y2="363.0" stroke="#c9d2d6"/>
+<text x="388.0" y="382.0" font-size="15" fill="#55646c" text-anchor="middle" font-weight="400">800</text>
+<text x="236.0" y="410.0" font-size="15" fill="#55646c" text-anchor="middle" font-weight="400">MITgcm 使用的 CPU 核数（MPI 进程数）</text>
+<text x="8.0" y="30.0" font-size="15" fill="#55646c" text-anchor="start" font-weight="400">每步计算耗时（秒）</text>
+<polyline points="81.9,80.7 235.0,238.9 275.2,268.8 315.5,285.9 364.8,311.0 379.0,316.7 388.0,307.1" fill="none" stroke="#8a9aa2" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="81.9" cy="80.7" r="3.6" fill="#fff" stroke="#8a9aa2" stroke-width="2"/>
+<circle cx="235.0" cy="238.9" r="3.6" fill="#fff" stroke="#8a9aa2" stroke-width="2"/>
+<circle cx="275.2" cy="268.8" r="3.6" fill="#fff" stroke="#8a9aa2" stroke-width="2"/>
+<circle cx="315.5" cy="285.9" r="3.6" fill="#fff" stroke="#8a9aa2" stroke-width="2"/>
+<circle cx="364.8" cy="311.0" r="3.6" fill="#fff" stroke="#8a9aa2" stroke-width="2"/>
+<circle cx="379.0" cy="316.7" r="3.6" fill="#fff" stroke="#8a9aa2" stroke-width="2"/>
+<circle cx="388.0" cy="307.1" r="3.6" fill="#fff" stroke="#8a9aa2" stroke-width="2"/>
+<text x="93.9" y="70.7" font-size="15" fill="#55646c" text-anchor="start" font-weight="600">MITgcm，CPU</text>
+<polyline points="46.0,286.6 426.0,286.6" fill="none" stroke="#0a5c86" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5"/>
+<text x="54.0" y="276.6" font-size="15" fill="#0a5c86" text-anchor="start" font-weight="600">TorchOcean，两张 GPU  0.161 s</text>
+<circle cx="315.5" cy="285.9" r="8" fill="none" stroke="#0f1d24" stroke-width="1.4"/>
+<text x="301.5" y="311.9" font-size="15" fill="#0f1d24" text-anchor="end" font-weight="600">MITgcm 576 核  0.162 s</text>
+</svg>

@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="zh-CN" data-lang="zh"
+      data-title-zh="唐浩洋，物理海洋学硕士在读"
+      data-title-en="Haoyang Tang, physical oceanography">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>唐浩洋，物理海洋学硕士在读</title>
+  <meta name="description" content="唐浩洋，中国科学院深海科学与工程研究所物理海洋学硕士在读，开发可微 GPU 海洋数值模式 TorchOcean。Haoyang Tang, developer of TorchOcean, a differentiable GPU ocean model.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search).get("lang"), s = null;
+      try { s = localStorage.getItem("lang"); } catch (e) {}
+      var l = q === "zh" || q === "en" ? q
+        : s === "zh" || s === "en" ? s
+        : (navigator.language || "").toLowerCase().indexOf("zh") === 0 ? "zh" : "en";
+      var h = document.documentElement;
+      h.dataset.lang = l;
+      h.lang = l === "zh" ? "zh-CN" : "en";
+      h.classList.add("js");
+      document.title = h.dataset["title" + (l === "zh" ? "Zh" : "En")];
+    })();
+  </script>
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main"><span lang="zh-CN">跳到正文</span><span lang="en">Skip to content</span></a>
+
+  <div class="layout">
+    <header class="rail">
+      <div class="rail-top">
+        <div class="identity">
+          <h1><span lang="zh-CN">唐浩洋</span><span lang="en">Haoyang Tang</span></h1>
+          <p class="alt-name"><span lang="zh-CN">Haoyang Tang</span><span lang="en">唐浩洋</span></p>
+        </div>
+        <div class="rail-actions">
+          <div class="lang-switch" role="group" aria-label="Language / 语言">
+            <button type="button" data-set-lang="zh" aria-pressed="true">中文</button>
+            <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+          </div>
+          <button type="button" class="rail-menu" aria-expanded="false" aria-controls="rail-body">
+            <span lang="zh-CN">简介</span><span lang="en">About</span>
+            <svg viewBox="0 0 12 12" aria-hidden="true"><path d="m2.5 4.5 3.5 3.5 3.5-3.5"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="rail-body" id="rail-body"><div class="rail-inner">
+      <p class="role" lang="zh-CN">中国科学院深海科学与工程研究所，物理海洋学硕士在读。做可微海洋数值模式、GPU 加速、混合建模和变分同化。</p>
+      <p class="role" lang="en">M.S. student in physical oceanography at the Institute of Deep-sea Science and Engineering, Chinese Academy of Sciences. I work on differentiable ocean models, GPU acceleration, hybrid modeling and variational data assimilation.</p>
+
+      <ul class="contact">
+        <li>
+          <a href="mailto:tanghy@idsse.ac.cn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+            tanghy@idsse.ac.cn
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/wojiaonioo">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M12 1.5a10.5 10.5 0 0 0-3.32 20.46c.52.1.72-.23.72-.5v-1.8c-2.92.63-3.54-1.4-3.54-1.4-.48-1.22-1.17-1.54-1.17-1.54-.95-.65.08-.64.08-.64 1.05.08 1.6 1.08 1.6 1.08.94 1.6 2.46 1.14 3.06.87.1-.68.37-1.14.66-1.4-2.33-.27-4.78-1.17-4.78-5.18 0-1.15.41-2.08 1.08-2.82-.1-.27-.47-1.33.1-2.78 0 0 .88-.28 2.89 1.08a10 10 0 0 1 5.26 0c2-1.36 2.88-1.08 2.88-1.08.58 1.45.21 2.51.1 2.78.68.74 1.08 1.67 1.08 2.82 0 4.02-2.45 4.9-4.79 5.16.38.33.71.97.71 1.96v2.9c0 .28.19.61.72.5A10.5 10.5 0 0 0 12 1.5Z"/></svg>
+            github.com/wojiaonioo
+          </a>
+        </li>
+        <li>
+          <a href="assets/tanghaoyang-cv.pdf">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6m-2.5-2.5L12 17l2.5-2.5"/></svg>
+            <span lang="zh-CN">简历 PDF</span><span lang="en">CV (PDF, in Chinese)</span>
+          </a>
+        </li>
+      </ul>
+
+      <nav class="depth-index" aria-label="Contents / 目录">
+        <ol>
+          <li><a href="#torchocean">TorchOcean</a></li>
+          <li><a href="#architecture"><span lang="zh-CN">结构</span><span lang="en">Architecture</span></a></li>
+          <li><a href="#performance"><span lang="zh-CN">性能</span><span lang="en">Performance</span></a></li>
+          <li><a href="#hybrid"><span lang="zh-CN">混合建模与同化</span><span lang="en">Hybrid modeling</span></a></li>
+          <li><a href="#validation"><span lang="zh-CN">对齐精度</span><span lang="en">Agreement</span></a></li>
+          <li><a href="#education"><span lang="zh-CN">教育经历</span><span lang="en">Education</span></a></li>
+        </ol>
+      </nav>
+      </div></div>
+    </header>
+
+    <main id="main" class="field">
+      <section id="torchocean" aria-labelledby="h-torchocean">
+        <p class="kicker"><span lang="zh-CN">2026 年 3 月起独立开发</span><span lang="en">Sole developer since March 2026</span></p>
+        <h2 id="h-torchocean"><span lang="zh-CN">TorchOcean：可微 GPU 海洋数值模式</span><span lang="en">TorchOcean: a differentiable GPU ocean model</span></h2>
+        <p class="lede" lang="zh-CN">参照 MITgcm 用 PyTorch 重写的可微海洋环流模式，梯度能穿过整段积分传回，神经网络因此可以嵌在时间步里在线训练。</p>
+        <p class="lede" lang="en">A differentiable ocean general circulation model rewritten from MITgcm in PyTorch. Gradients pass through the whole integration, so a neural network can sit inside the time step and be trained online.</p>
+
+        <figure class="plate plate-lead flow">
+          <div class="flow-frame">
+            <video class="flow-video" data-panel="mit" src="assets/flow.mp4" poster="assets/flow-poster.webp"
+                   width="976" height="612" autoplay muted loop playsinline preload="auto"></video>
+            <video class="flow-video is-off" data-panel="diff" src="assets/flow-diff.mp4" width="976" height="612"
+                   muted loop playsinline preload="none" aria-hidden="true"></video>
+            <input type="range" class="flow-scrub" min="0" max="29" step="0.05" value="0" hidden
+                   aria-label="模拟时间（天） / Model day">
+          </div>
+          <div class="flow-bar">
+            <div class="flow-legend flow-legend-diff" aria-hidden="true">
+              <span class="flow-legend-name">|TO − MIT|</span>
+              <span class="flow-scale flow-scale-diff"></span>
+              <span class="flow-ticks"><span>10⁻⁹</span><span>10⁻⁶</span><span>10⁻³ m/s</span></span>
+            </div>
+            <div class="flow-legend" aria-hidden="true">
+              <span class="flow-legend-name"><span lang="zh-CN">流速</span><span lang="en">Speed</span></span>
+              <span class="flow-scale"></span>
+              <span class="flow-ticks"><span>0</span><span>0.6</span><span>1.2 m/s</span></span>
+            </div>
+            <div class="flow-controls">
+              <div class="flow-panel" role="group" aria-label="左图 / Left panel" hidden>
+                <span class="flow-panel-name" aria-hidden="true"><span lang="zh-CN">左图</span><span lang="en">Left</span></span>
+                <span class="seg">
+                  <button type="button" data-flow-panel="mit" aria-pressed="true">MITgcm</button>
+                  <button type="button" data-flow-panel="diff" aria-pressed="false"><span lang="zh-CN">误差</span><span lang="en">Difference</span></button>
+                </span>
+              </div>
+              <button type="button" class="flow-toggle" hidden><span lang="zh-CN">暂停</span><span lang="en">Pause</span></button>
+            </div>
+          </div>
+          <figcaption>
+            <span lang="zh-CN"><b>图 1</b>　29 天区域模拟（2019 年 7 月 15 日至 8 月 13 日）的海表流场，范围 99°E 至 129°E、1.5°N 至 30°N，模式水平分辨率 1/32°。左为 MITgcm，右为 TorchOcean，颜色表示流速大小，白色粒子沿流场运动，两边的粒子从同一组位置出发，粒子速度按显示需要放大。视频用每 6 小时一帧的模式输出，帧间按时间线性插值，流场按 3×3 个格点平均。下方曲线是两个模式海表流速的均方根差，初始时刻为 0，29 天内不超过 1.3×10<sup>−4</sup> m/s；单个格点的最大差为 0.045 m/s，出现在第 1.5 天棉兰老岛以东。点「误差」，左图换成两个模式流速之差的大小，按 3×3 个格点取均方根，用对数色标，最暗处不超过 10<sup>−9</sup> m/s。</span>
+            <span lang="en"><b>Figure 1.</b> Surface currents over a 29-day regional simulation (15 July to 13 August 2019), 99°E to 129°E and 1.5°N to 30°N at 1/32° resolution; MITgcm on the left, TorchOcean on the right. Colour shows speed; white particles move with the flow, start from the same positions in both panels, and are sped up for display. The video uses model output every 6 hours, interpolated linearly in time and averaged over 3×3 cells. The curve below is the root-mean-square difference of surface velocity between the two models: 0 at the start and at most 1.3×10<sup>−4</sup> m/s over 29 days; the largest single-cell difference, 0.045 m/s, occurs on day 1.5 east of Mindanao. <i>Difference</i> replaces the left panel with the magnitude of the velocity difference between the models, as the rms over 3×3 cells on a log scale; the darkest colour is 10<sup>−9</sup> m/s or less.</span>
+          </figcaption>
+        </figure>
+
+      </section>
+
+      <section id="architecture" aria-labelledby="h-architecture">
+        <h2 id="h-architecture"><span lang="zh-CN">结构</span><span lang="en">Architecture</span></h2>
+        <p lang="zh-CN">模式支持区域、全球经纬度和立方球网格，静力和非静力方程，以及开边界、KPP 垂向混合和潮汐强迫。代码约 12 万行 Python 和 1.4 万行 CUDA C++，3500 多次提交。</p>
+        <p lang="en">The model runs regional, global latitude–longitude and cubed-sphere grids with hydrostatic or nonhydrostatic equations, open boundaries, KPP vertical mixing and tidal forcing. The code is about 120,000 lines of Python and 14,000 lines of CUDA C++, with more than 3,500 commits.</p>
+        <p lang="zh-CN">一个时间步分五个阶段，神经网络作为组件嵌在其中，反向传播按相反顺序经过同样的阶段。执行分四层，最底层是纯 PyTorch 参照实现，编译、CUDA kernel 和多进程区域分解三层可以分别开关，开与不开只差舍入误差。</p>
+        <p lang="en">A time step has five stages, with the neural network as one component inside them; backpropagation passes through the same stages in reverse. Execution has four layers. The bottom one is a plain PyTorch reference; compilation, CUDA kernels and multi-process domain decomposition can each be switched on or off and change results only by rounding.</p>
+
+        <figure class="plate plate-arch" data-zoom="1100">
+          <button type="button" class="plate-open">
+            <img lang="zh-CN" src="assets/fig-arch-zh.svg" width="397" height="419" loading="lazy"
+                 alt="TorchOcean 结构图，分三部分：一个时间步的五个阶段和伴随计算，梯度计算的分段重算，四层执行方式及其运行条件。">
+            <img lang="en" src="assets/fig-arch-en.svg" width="397" height="419" loading="lazy"
+                 alt="TorchOcean architecture in three panels: the five stages of a time step with the adjoint computation, segmented recomputation for gradients, and the four execution layers with their requirements.">
+            <span class="zoom-hint" aria-hidden="true"><span lang="zh-CN">放大</span><span lang="en">Enlarge</span></span>
+          </button>
+          <figcaption>
+            <span lang="zh-CN"><b>图 2</b>　TorchOcean 的结构。(a) 一个时间步的五个阶段和对应的伴随计算；(b) 梯度计算按段保存起始状态，反向时逐段重算；(c) 四层执行方式和各自的运行条件。</span>
+            <span lang="en"><b>Figure 2.</b> TorchOcean architecture. (a) The five stages of a time step and the matching adjoint computation; (b) gradients store the first state of each segment and recompute segment by segment in reverse; (c) the four execution layers and what each needs to run.</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="performance" aria-labelledby="h-performance">
+        <h2 id="h-performance"><span lang="zh-CN">性能</span><span lang="en">Performance</span></h2>
+        <figure class="plate" data-zoom="1200">
+          <button type="button" class="plate-open">
+            <picture lang="zh-CN"><source media="(max-width: 600px)" srcset="assets/fig-ladder-zh-m.svg" width="440" height="420"><img src="assets/fig-ladder-zh.svg" width="760" height="400"
+                 alt="折线图：MITgcm 每步计算耗时随 CPU 核数增加，从 200 核的 0.854 秒降到 768 核的 0.126 秒；TorchOcean 用两张 A800 为 0.161 秒，与 MITgcm 用 576 核的 0.162 秒相当。"></picture>
+            <picture lang="en"><source media="(max-width: 600px)" srcset="assets/fig-ladder-en-m.svg" width="440" height="420"><img src="assets/fig-ladder-en.svg" width="760" height="400"
+                 alt="Line chart: MITgcm time per step falls from 0.854 s on 200 cores to 0.126 s on 768 cores; TorchOcean on two A800 GPUs takes 0.161 s, close to MITgcm's 0.162 s on 576 cores."></picture>
+            <span class="zoom-hint" aria-hidden="true"><span lang="zh-CN">放大</span><span lang="en">Enlarge</span></span>
+          </button>
+          <figcaption>
+            <span lang="zh-CN"><b>图 3</b>　960×960×90 网格（8294 万个格点）双精度静力模拟的每步计算耗时。TorchOcean 用两张 A800 GPU 为 0.161 秒（虚线），MITgcm 要用 576 个 CPU 核才达到同样的速度（灰线为 MITgcm 用 200 至 800 核的耗时）。MITgcm 的计时扣除了输入输出，取 100 步平均；TorchOcean 取三次独立运行的中位数。</span>
+            <span lang="en"><b>Figure 3.</b> Time per step of a double-precision hydrostatic simulation on a 960×960×90 grid (82.9 million cells). TorchOcean on two A800 GPUs takes 0.161 s (dashed); MITgcm needs 576 CPU cores to run as fast (gray, MITgcm on 200 to 800 cores). MITgcm times exclude I/O and average 100 steps; the TorchOcean time is the median of three independent runs.</span>
+          </figcaption>
+        </figure>
+        <p lang="zh-CN">图 3 是 960×960×90 网格上的双精度静力模拟。同一算例从 PyTorch 直接执行时的每步 786 毫秒降到 161 毫秒，主要做了三件事。</p>
+        <p lang="en">Figure 3 is a double-precision hydrostatic simulation on a 960×960×90 grid. The same case went from 786 ms per step under plain PyTorch execution to 161 ms. The main work was:</p>
+        <ul class="ticks">
+          <li>
+            <span lang="zh-CN">重构时间步代码，解决 torch.compile 的编译碎片和每步重编译。原先每步碎成 131 段、6 个函数退回未编译执行，改造后整步只在求解器处断开，稳态不再重编译。</span>
+            <span lang="en">Restructuring the time step so torch.compile no longer fragments it or recompiles every step. A step used to break into 131 pieces with 6 functions falling back to uncompiled execution; now it breaks only at the solver and stops recompiling once warm.</span>
+          </li>
+          <li>
+            <span lang="zh-CN">手写 43 个 CUDA kernel，把 KPP 混合、隐式垂向平流、示踪物平流和水平黏性的多步计算各合并成一个 kernel。KPP 边界层深度计算的 kernel 启动从 2786 次降到 2 次，比 PyTorch 实现快 80 倍以上。其中 6 个 kernel 带手写反向。</span>
+            <span lang="en">Writing 43 CUDA kernels that fuse the multi-step computations of KPP mixing, implicit vertical advection, tracer advection and horizontal viscosity into one kernel each. The KPP boundary-layer depth went from 2,786 kernel launches to 2 and runs more than 80 times faster than the PyTorch version. Six kernels have hand-written backward passes.</span>
+          </li>
+          <li>
+            <span lang="zh-CN">解决编译器重排通信导致的多卡死锁。</span>
+            <span lang="en">Fixing a multi-GPU deadlock caused by the compiler reordering communication.</span>
+          </li>
+        </ul>
+        <p lang="zh-CN">单卡每格点每步 3.3 纳秒，与 GPU 海洋模式 Oceananigans 同一量级。两张卡的并行效率随网格增大而提高（图 4）。</p>
+        <p lang="en">A single GPU spends 3.3 ns per cell per step, the same order as the GPU ocean model Oceananigans. Two-GPU efficiency rises with grid size (Figure 4).</p>
+
+        <figure class="plate" data-zoom="1200">
+          <button type="button" class="plate-open">
+            <picture lang="zh-CN"><source media="(max-width: 600px)" srcset="assets/fig-scaling-zh-m.svg" width="440" height="420"><img src="assets/fig-scaling-zh.svg" width="760" height="400" loading="lazy"
+                 alt="折线图：两张 GPU 相对一张的并行效率随每卡格点数增加而上升，静力从 29% 升到 85%，非静力从 29% 升到 93%。"></picture>
+            <picture lang="en"><source media="(max-width: 600px)" srcset="assets/fig-scaling-en-m.svg" width="440" height="420"><img src="assets/fig-scaling-en.svg" width="760" height="400" loading="lazy"
+                 alt="Line chart: two-GPU parallel efficiency rises with cells per GPU, from 29% to 85% for hydrostatic runs and from 29% to 93% for nonhydrostatic runs."></picture>
+            <span class="zoom-hint" aria-hidden="true"><span lang="zh-CN">放大</span><span lang="en">Enlarge</span></span>
+          </button>
+          <figcaption>
+            <span lang="zh-CN"><b>图 4</b>　两张 GPU 相对一张 GPU 的并行效率，等于单卡耗时除以两倍的双卡耗时。最大网格上静力 85%，非静力 93%。</span>
+            <span lang="en"><b>Figure 4.</b> Parallel efficiency of two GPUs over one, the one-GPU time divided by twice the two-GPU time. On the largest grid it is 85% for hydrostatic and 93% for nonhydrostatic runs.</span>
+          </figcaption>
+        </figure>
+
+        <p lang="zh-CN">梯度计算中，检查点按显存余量放在显存或主机内存，求解器的反向改用隐式微分。480×456×90 网格单卡 100 步的梯度从 421 秒降到 30 秒，约为模拟耗时的 4 倍。</p>
+        <p lang="en">For gradients, checkpoints go to GPU or host memory depending on free space, and the solver is differentiated implicitly. A 100-step gradient on a 480×456×90 grid on one GPU went from 421 s to 30 s, about four times the simulation time.</p>
+      </section>
+
+      <section id="hybrid" aria-labelledby="h-hybrid">
+        <h2 id="h-hybrid"><span lang="zh-CN">混合建模与资料同化</span><span lang="en">Hybrid modeling and data assimilation</span></h2>
+        <ul class="ticks">
+          <li>
+            <span lang="zh-CN">用 337 个参数的神经网络替换底摩擦公式，在线训练后恢复出了生成真值所用的公式，测试期损失降到训练前的 1/498。</span>
+            <span lang="en">Replaced the bottom-drag formula with a 337-parameter neural network; online training recovered the formula used to generate the truth and cut the test loss to 1/498 of its value before training.</span>
+          </li>
+          <li>
+            <span lang="zh-CN">把 KPP 垂向混合换成神经网络，只用温盐观测训练，测试期温度误差降低 80% 至 88%，并分析了这类观测能约束哪些混合参数。</span>
+            <span lang="en">Replaced KPP vertical mixing with a neural network trained only on temperature and salinity observations; test-period temperature error fell by 80% to 88%, and I analyzed which mixing parameters such observations can constrain.</span>
+          </li>
+          <li>
+            <span lang="zh-CN">用自动微分代替手写伴随做 4D-Var，同样设置下代价函数和 MITgcm 伴随模式一样降到初值的约 1/11.7；区域孪生试验同化后温度误差降低 81%。</span>
+            <span lang="en">Ran 4D-Var with automatic differentiation instead of a hand-written adjoint; under the same settings the cost function falls to about 1/11.7 of its initial value, as with MITgcm's adjoint. In a regional twin experiment, assimilation reduced temperature error by 81%.</span>
+          </li>
+          <li>
+            <span lang="zh-CN">南海试验中反演底摩擦系数，误差从 20% 降到 5.1%；用 Ocean Station Papa 站的实测温度剖面估计表面热通量修正。</span>
+            <span lang="en">Inverted the bottom-drag coefficient in a South China Sea experiment, reducing its error from 20% to 5.1%, and estimated a surface heat-flux correction from measured temperature profiles at Ocean Station Papa.</span>
+          </li>
+        </ul>
+        <p lang="zh-CN">下一步计划耦合 WRF 大气模式，构建可微海气耦合模式，并在此基础上发展 AI 混合 4D-Var 同化。</p>
+        <p lang="en">Next, I plan to couple the WRF atmospheric model into a differentiable ocean–atmosphere model and build hybrid AI 4D-Var assimilation on it.</p>
+      </section>
+
+      <section id="validation" aria-labelledby="h-validation">
+        <h2 id="h-validation"><span lang="zh-CN">与 MITgcm 的对齐精度</span><span lang="en">Agreement with MITgcm</span></h2>
+        <ul class="ticks">
+          <li>
+            <span lang="zh-CN">在 MITgcm 的 Fortran 源码中插桩，输出时间步内各阶段的中间变量，逐阶段比对。6 个 MITgcm 官方算例全部通过，其中 5 个积分 600 步后与 MITgcm 逐位一致。</span>
+            <span lang="en">Instrumented MITgcm's Fortran source to write the intermediate fields of every stage and compared them stage by stage. All 6 official MITgcm test cases pass, and 5 of them stay bit-for-bit identical to MITgcm after 600 steps.</span>
+          </li>
+          <li>
+            <span lang="zh-CN">全球 50 天模拟的梯度与 MITgcm 用 Tapenade 生成的伴随模式逐点比较，23.8 万个控制变量上最大归一化差为 5.5×10<sup>−11</sup>。</span>
+            <span lang="en">Compared the gradient of a 50-day global simulation point by point with MITgcm's Tapenade-generated adjoint: the largest normalized difference over 238,000 control variables is 5.5×10<sup>−11</sup>.</span>
+          </li>
+          <li>
+            <span lang="zh-CN">建立验证矩阵，按算例和卡数检查模拟结果、梯度、性能和显存，取代了原有的 7450 项单元测试。</span>
+            <span lang="en">Built a verification matrix that checks simulation results, gradients, speed and memory for each case and GPU count, replacing the former 7,450 unit tests.</span>
+          </li>
+          <li>
+            <span lang="zh-CN">向 MITgcm 报告两处代码缺陷。开边界海绵层南边界的盐度松弛时间用错了厚度（<a href="https://github.com/MITgcm/MITgcm/issues/989">issue #989</a>），已由 <a href="https://github.com/MITgcm/MITgcm/pull/990">PR #990</a> 修复；控制变量模块的时间插值权重写反（<a href="https://github.com/MITgcm/MITgcm/issues/1039">issue #1039</a>），修复 <a href="https://github.com/MITgcm/MITgcm/pull/1040">PR #1040</a> 已获维护者批准。</span>
+            <span lang="en">Reported two defects to MITgcm. The salinity relaxation time on the southern open-boundary sponge used the wrong thickness (<a href="https://github.com/MITgcm/MITgcm/issues/989">issue #989</a>), fixed by <a href="https://github.com/MITgcm/MITgcm/pull/990">PR #990</a>; the time interpolation weights in the control-variable package were swapped (<a href="https://github.com/MITgcm/MITgcm/issues/1039">issue #1039</a>), and the fix in <a href="https://github.com/MITgcm/MITgcm/pull/1040">PR #1040</a> has been approved by a maintainer.</span>
+          </li>
+        </ul>
+        <p lang="zh-CN">29 天区域模拟中两个模式的海表流场和逐时刻的差值见图 1。</p>
+        <p lang="en">Figure 1 shows the surface flow of both models over a 29-day regional simulation and their difference at each time.</p>
+      </section>
+
+      <section id="education" aria-labelledby="h-education">
+        <h2 id="h-education"><span lang="zh-CN">教育经历</span><span lang="en">Education</span></h2>
+        <ol class="timeline">
+          <li>
+            <span class="when"><span lang="zh-CN">2025.09 至今</span><span lang="en">2025.09 – present</span></span>
+            <span class="what"><span lang="zh-CN">中国科学院深海科学与工程研究所，物理海洋学，硕士</span><span lang="en">Institute of Deep-sea Science and Engineering, Chinese Academy of Sciences, M.S. in Physical Oceanography</span></span>
+          </li>
+          <li>
+            <span class="when">2019.09 – 2023.06</span>
+            <span class="what"><span lang="zh-CN">兰州大学，大气科学，本科</span><span lang="en">Lanzhou University, B.S. in Atmospheric Sciences</span></span>
+          </li>
+        </ol>
+      </section>
+
+      <footer class="end">
+        <p lang="zh-CN">实习和合作请写信到 <a href="mailto:tanghy@idsse.ac.cn">tanghy@idsse.ac.cn</a>。</p>
+        <p lang="en">For internships or collaboration, write to <a href="mailto:tanghy@idsse.ac.cn">tanghy@idsse.ac.cn</a>.</p>
+        <p class="updated"><span lang="zh-CN">更新于 2026 年 10 月</span><span lang="en">Updated October 2026</span></p>
+      </footer>
+    </main>
+  </div>
+
+  <dialog class="viewer" aria-labelledby="viewer-caption">
+    <div class="viewer-bar">
+      <button type="button" class="viewer-zoom" aria-pressed="false">
+        <span class="hint-fit"><span lang="zh-CN">放大细节</span><span lang="en">Show detail</span></span>
+        <span class="hint-zoom"><span lang="zh-CN">缩回全图（放大后可滚动查看）</span><span lang="en">Fit to window (scroll while zoomed)</span></span>
+      </button>
+      <button type="button" class="viewer-close"><span lang="zh-CN">关闭</span><span lang="en">Close</span></button>
+    </div>
+    <div class="viewer-scroll">
+      <img alt="">
+    </div>
+    <p class="viewer-caption" id="viewer-caption"></p>
+  </dialog>
+</body>
+</html>
