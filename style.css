@@ -91,6 +91,10 @@ html[data-lang="en"] h1 { font-size: 30px; line-height: 1.2; letter-spacing: -.0
 .rail-menu[aria-expanded="true"] svg { transform: rotate(180deg); }
 
 .role { margin: 28px 0 0; font-size: 15px; line-height: 1.75; color: var(--ink-2); }
+.focus { margin: 14px 0 0; font-size: 15px; line-height: 1.75; color: var(--ink-2); }
+/* Chinese lines break only at punctuation, so no term is split across lines. */
+.role, .focus { word-break: keep-all; }
+.focus-label { display: block; color: var(--ink-3); font-size: 13px; font-weight: 600; letter-spacing: .02em; }
 
 .contact { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 6px; }
 .contact a { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; color: var(--ink);
@@ -283,6 +287,7 @@ figcaption b { color: var(--ink); font-weight: 650; }
                                      transition: grid-template-rows 250ms var(--ease); }
   .rail-inner { min-height: 0; overflow: hidden; }
   .role { margin-top: 14px; }
+  .focus { margin-top: 10px; }
   .contact { margin-top: 14px; }
   .depth-index { margin: 18px 0 8px; }
   .field { padding: 32px 0 64px; }
