@@ -171,11 +171,6 @@ figcaption { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--ha
              font-size: 14px; line-height: 1.7; color: var(--ink-3); }
 figcaption b { color: var(--ink); font-weight: 650; }
 
-.timeline { list-style: none; margin: 0; padding: 0; }
-.timeline li { display: grid; grid-template-columns: 172px minmax(0, 1fr); column-gap: 24px; padding: 4px 0; }
-.timeline li + li { margin-top: 10px; }
-.timeline .when { color: var(--ink-3); font-size: 15px; }
-.timeline .what { color: var(--ink); }
 
 .end { margin-top: 72px; padding-top: 28px; border-top: 1px solid var(--line); }
 .end p { margin-bottom: 8px; color: var(--ink); }
@@ -300,7 +295,6 @@ figcaption b { color: var(--ink); font-weight: 650; }
   .plate-arch { padding: 18px 12px 14px; }
   .zoom-hint { top: -6px; right: -4px; }
   .flow-legend { width: auto; flex: 1 1 120px; max-width: 200px; }
-  .timeline li { grid-template-columns: 1fr; }
   .end { margin-top: 56px; }
   .viewer { width: calc(100vw - 16px); max-height: calc(100vh - 16px); border-radius: 14px; }
   .viewer-scroll { margin: 8px 12px 0; }
