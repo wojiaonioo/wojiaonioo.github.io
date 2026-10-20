@@ -36,9 +36,18 @@
   var tabFor = function (id) {
     return tabs.find(function (t) { return t.getAttribute("aria-controls") === id; });
   };
+  // A click whose panel opens below the lower part of the window scrolls the tabs to the top, so the
+  // change is visible; the browser already does this for a hash in the URL.
+  var tabRow = document.querySelector(".tabs");
+  var reveal = function (panel) {
+    if (panel.getBoundingClientRect().top < window.innerHeight * 0.6) return;
+    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    tabRow.scrollIntoView({ block: "start", behavior: still ? "auto" : "smooth" });
+  };
   tabs.forEach(function (t, i) {
     t.addEventListener("click", function () {
       selectTab(t);
+      reveal(document.getElementById(t.getAttribute("aria-controls")));
       var url = new URL(location.href);
       url.hash = t.getAttribute("aria-controls");
       history.replaceState(null, "", url);

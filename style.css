@@ -168,7 +168,8 @@ figcaption b { color: var(--ink); font-weight: 650; }
 .cap-full { display: none; }
 
 /* Section tabs: each card names a section and states its result; the selected one opens below. */
-.tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 26px 0 12px; }
+.tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 26px 0 12px;
+        scroll-margin-top: 16px; }
 html:not(.js) .tabs { display: none; }
 .tab { position: relative; display: flex; flex-direction: column; justify-content: flex-start; appearance: none; margin: 0; padding: 13px 16px 14px; text-align: left; cursor: pointer;
        font: inherit; color: var(--ink-2); background: rgba(255, 255, 255, .5); border: 1px solid var(--hair);
