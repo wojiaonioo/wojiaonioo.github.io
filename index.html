@@ -19,6 +19,9 @@
       h.dataset.lang = l;
       h.lang = l === "zh" ? "zh-CN" : "en";
       h.classList.add("js");
+      // Dark from 18:00 to 07:00 on the visitor's clock; site.js re-checks while the page stays open.
+      var hr = new Date().getHours();
+      h.dataset.theme = hr >= 18 || hr < 7 ? "dark" : "light";
       document.title = h.dataset["title" + (l === "zh" ? "Zh" : "En")];
     })();
   </script>

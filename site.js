@@ -21,6 +21,15 @@
   });
   setLang(root.dataset.lang, false);
 
+  // Theme: dark from 18:00 to 07:00 on the visitor's clock. The head script sets it before the first paint;
+  // a page left open switches at the boundary, and a tab coming back from sleep catches up at once.
+  var setTheme = function () {
+    var hr = new Date().getHours();
+    root.dataset.theme = hr >= 18 || hr < 7 ? "dark" : "light";
+  };
+  setInterval(setTheme, 60000);
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) setTheme(); });
+
   // Section tabs: arrow keys move between tabs, and the selected section is recorded in the URL hash, so
   // a reload or a shared link (#performance) opens the same one.
   var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
