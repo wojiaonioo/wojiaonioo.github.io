@@ -59,7 +59,7 @@
         <li>
           <a href="https://github.com/wojiaonioo">
             <svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M12 1.5a10.5 10.5 0 0 0-3.32 20.46c.52.1.72-.23.72-.5v-1.8c-2.92.63-3.54-1.4-3.54-1.4-.48-1.22-1.17-1.54-1.17-1.54-.95-.65.08-.64.08-.64 1.05.08 1.6 1.08 1.6 1.08.94 1.6 2.46 1.14 3.06.87.1-.68.37-1.14.66-1.4-2.33-.27-4.78-1.17-4.78-5.18 0-1.15.41-2.08 1.08-2.82-.1-.27-.47-1.33.1-2.78 0 0 .88-.28 2.89 1.08a10 10 0 0 1 5.26 0c2-1.36 2.88-1.08 2.88-1.08.58 1.45.21 2.51.1 2.78.68.74 1.08 1.67 1.08 2.82 0 4.02-2.45 4.9-4.79 5.16.38.33.71.97.71 1.96v2.9c0 .28.19.61.72.5A10.5 10.5 0 0 0 12 1.5Z"/></svg>
-            github.com/wojiaonioo
+            GitHub
           </a>
         </li>
         <li lang="zh-CN">
@@ -75,172 +75,219 @@
           </a>
         </li>
       </ul>
-      <nav class="depth-index" aria-label="Contents / 目录">
-        <ol>
-          <li><a href="#torchocean">TorchOcean</a></li>
-          <li><a href="#architecture"><span lang="zh-CN">结构</span><span lang="en">Architecture</span></a></li>
-          <li><a href="#performance"><span lang="zh-CN">性能</span><span lang="en">Performance</span></a></li>
-          <li><a href="#assimilation"><span lang="zh-CN">变分同化</span><span lang="en">4D-Var</span></a></li>
-          <li><a href="#hybrid"><span lang="zh-CN">混合建模</span><span lang="en">Hybrid modeling</span></a></li>
-        </ol>
-      </nav>
       </div></div>
     </header>
     <main id="main" class="field">
-      <section id="torchocean" aria-labelledby="h-torchocean">
-        <p class="kicker"><span lang="zh-CN">2026 年 3 月起独立开发</span><span lang="en">Sole developer since March 2026</span></p>
-        <h2 id="h-torchocean"><span lang="zh-CN">TorchOcean：可微 GPU 海洋数值模式</span><span lang="en">TorchOcean: a differentiable GPU ocean model</span></h2>
-        <p class="lede" lang="zh-CN">用 PyTorch 实现 MITgcm 的海洋离散方案，同一个 GPU 程序计算正向积分和它的梯度。梯度用于四维变分同化，也能传到模式内部的神经网络，网络因此可以在模式里在线训练。</p>
-        <p class="lede" lang="en">The ocean discretizations of MITgcm implemented in PyTorch, so that one GPU program computes forward integrations and their gradients. The gradients drive 4D-Var data assimilation and also reach neural networks inside the model, which can therefore be trained online.</p>
-        <figure class="plate plate-lead flow">
-          <div class="flow-frame">
-            <video class="flow-video" data-panel="mit" src="assets/flow.mp4" poster="assets/flow-poster.webp"
-                   width="976" height="520" autoplay muted loop playsinline preload="auto"></video>
-            <video class="flow-video is-off" data-panel="diff" src="assets/flow-diff.mp4" width="976" height="520"
-                   muted loop playsinline preload="none" aria-hidden="true"></video>
-            <input type="range" class="flow-scrub" min="0" max="29" step="0.05" value="0" hidden
-                   aria-label="模拟时间（天） / Model day">
+      <section id="torchocean" class="hero" aria-labelledby="h-torchocean">
+        <div class="hero-head">
+          <div>
+            <p class="kicker"><span lang="zh-CN">2026 年 3 月起独立开发</span><span lang="en">Sole developer since March 2026</span></p>
+            <h2 id="h-torchocean">TorchOcean<span class="hero-sub"><span lang="zh-CN">可微 GPU 海洋数值模式</span><span lang="en">A differentiable GPU ocean model</span></span></h2>
           </div>
-          <div class="flow-bar">
-            <div class="flow-legend flow-legend-diff" aria-hidden="true">
-              <span class="flow-legend-name">|TO − MIT|</span>
-              <span class="flow-scale flow-scale-diff"></span>
-              <span class="flow-ticks"><span>10⁻⁹</span><span>10⁻⁶</span><span>10⁻³ m/s</span></span>
+          <p class="lede" lang="zh-CN">用 PyTorch 实现 MITgcm 的海洋离散方案，同一个 GPU 程序计算正向积分和它的梯度。梯度用于四维变分同化，也能传到模式内部的神经网络，网络因此可以在模式里在线训练。</p>
+          <p class="lede" lang="en">The ocean discretizations of MITgcm implemented in PyTorch, so that one GPU program computes forward integrations and their gradients. The gradients drive 4D-Var data assimilation and also reach neural networks inside the model, which can therefore be trained online.</p>
+        </div>
+        <figure class="plate flow">
+          <div class="flow-main">
+            <div class="flow-frame">
+              <video class="flow-video" data-panel="mit" src="assets/flow.mp4" poster="assets/flow-poster.webp"
+                     width="976" height="520" autoplay muted loop playsinline preload="auto"></video>
+              <video class="flow-video is-off" data-panel="diff" src="assets/flow-diff.mp4" width="976" height="520"
+                     muted loop playsinline preload="none" aria-hidden="true"></video>
+              <input type="range" class="flow-scrub" min="0" max="29" step="0.05" value="0" hidden
+                     aria-label="模拟时间（天） / Model day">
             </div>
-            <div class="flow-legend" aria-hidden="true">
-              <span class="flow-legend-name"><span lang="zh-CN">流速</span><span lang="en">Speed</span></span>
-              <span class="flow-scale"></span>
-              <span class="flow-ticks"><span>0</span><span>0.6</span><span>1.2 m/s</span></span>
-            </div>
-            <div class="flow-controls">
-              <div class="flow-panel" role="group" aria-label="左图 / Left panel" hidden>
-                <span class="flow-panel-name" aria-hidden="true"><span lang="zh-CN">左图</span><span lang="en">Left</span></span>
-                <span class="seg">
-                  <button type="button" data-flow-panel="mit" aria-pressed="true">MITgcm</button>
-                  <button type="button" data-flow-panel="diff" aria-pressed="false"><span lang="zh-CN">误差</span><span lang="en">Difference</span></button>
-                </span>
+            <div class="flow-bar">
+              <div class="flow-legend flow-legend-diff" aria-hidden="true">
+                <span class="flow-legend-name">|TO − MIT|</span>
+                <span class="flow-scale flow-scale-diff"></span>
+                <span class="flow-ticks"><span>10⁻⁹</span><span>10⁻⁶</span><span>10⁻³ m/s</span></span>
               </div>
-              <button type="button" class="flow-toggle" hidden><span lang="zh-CN">暂停</span><span lang="en">Pause</span></button>
+              <div class="flow-legend" aria-hidden="true">
+                <span class="flow-legend-name"><span lang="zh-CN">流速</span><span lang="en">Speed</span></span>
+                <span class="flow-scale"></span>
+                <span class="flow-ticks"><span>0</span><span>0.6</span><span>1.2 m/s</span></span>
+              </div>
+              <div class="flow-controls">
+                <div class="flow-panel" role="group" aria-label="左图 / Left panel" hidden>
+                  <span class="flow-panel-name" aria-hidden="true"><span lang="zh-CN">左图</span><span lang="en">Left</span></span>
+                  <span class="seg">
+                    <button type="button" data-flow-panel="mit" aria-pressed="true">MITgcm</button>
+                    <button type="button" data-flow-panel="diff" aria-pressed="false"><span lang="zh-CN">误差</span><span lang="en">Difference</span></button>
+                  </span>
+                </div>
+                <button type="button" class="flow-toggle" hidden><span lang="zh-CN">暂停</span><span lang="en">Pause</span></button>
+              </div>
             </div>
           </div>
-          <div class="flow-agree">
-            <picture lang="zh-CN"><source media="(max-width: 600px)" srcset="assets/fig-agree-zh-m.svg" width="480" height="400"><img src="assets/fig-agree-zh.svg" width="600" height="400" loading="lazy"
-                 alt="折线图：前 3 天温度均方根差，TorchOcean 与 MITgcm 之差和 MITgcm 换进程分块的两次运行之差都在第 1.75 天达到约 2×10⁻⁴ K 的峰值。"></picture>
-            <picture lang="en"><source media="(max-width: 600px)" srcset="assets/fig-agree-en-m.svg" width="480" height="400"><img src="assets/fig-agree-en.svg" width="600" height="400" loading="lazy"
-                 alt="Line chart: RMS temperature difference over the first 3 days; TorchOcean minus MITgcm and the difference between two MITgcm process layouts both peak near 2×10⁻⁴ K on day 1.75."></picture>
+          <div class="flow-side">
+            <div class="flow-agree">
+              <img lang="zh-CN" src="assets/fig-agree-zh-m.svg" width="480" height="400"
+                   alt="折线图：前 3 天温度均方根差，TorchOcean 与 MITgcm 之差和 MITgcm 换进程分块的两次运行之差都在第 1.75 天达到约 2×10⁻⁴ K 的峰值。">
+              <img lang="en" src="assets/fig-agree-en-m.svg" width="480" height="400"
+                   alt="Line chart: RMS temperature difference over the first 3 days; TorchOcean minus MITgcm and the difference between two MITgcm process layouts both peak near 2×10⁻⁴ K on day 1.75.">
+            </div>
+            <figcaption>
+              <span lang="zh-CN"><b>图 1</b>　2019 年 7 月 15 日起 29 天的区域模拟（99°E 至 129°E、1.5°N 至 30°N，1/32°）的海表流场，左为 MITgcm，右为 TorchOcean；点「误差」，左图换成两个模式流速之差。上方小图是前 3 天温度的均方根差：TorchOcean 与 MITgcm 之差（蓝）和 MITgcm 换进程分块的两次运行之差（橙）都在第 1.75 天达到峰值，相差不到 3%，即差异只有浮点舍入的量级。</span>
+              <span lang="en"><b>Figure 1.</b> Surface currents of a 29-day regional simulation from 15 July 2019 (99°E to 129°E, 1.5°N to 30°N, 1/32°), MITgcm left and TorchOcean right; <i>Difference</i> shows the speed difference between the two. The chart above is the RMS temperature difference over the first 3 days: TorchOcean minus MITgcm (blue) and two MITgcm runs with different process layouts (orange) both peak on day 1.75 within 3% of each other, so the models differ by rounding only.</span>
+            </figcaption>
           </div>
-          <figcaption>
-            <span lang="zh-CN"><b>图 1</b>　29 天区域模拟（2019 年 7 月 15 日至 8 月 13 日）的海表流场，范围 99°E 至 129°E、1.5°N 至 30°N，模式水平分辨率 1/32°。左为 MITgcm，右为 TorchOcean，颜色表示流速大小，白色粒子沿流场运动，两边的粒子从同一组位置出发，粒子速度按显示需要放大。视频用每 6 小时一帧的模式输出，帧间按时间线性插值，流场按 3×3 个格点平均。点「误差」，左图换成两个模式流速之差的大小，按 3×3 个格点取均方根，用对数色标，最暗处不超过 10<sup>−9</sup> m/s。小图是前 3 天全部湿格点的温度均方根差：TorchOcean 与 MITgcm 之差（蓝）贴着 MITgcm 自身换进程分块的两次运行之差（橙），两条都在第 1.75 天达到峰值，相差不到 3%，即 TorchOcean 与 MITgcm 的差异只有浮点舍入的量级。</span>
-            <span lang="en"><b>Figure 1.</b> Surface currents over a 29-day regional simulation (15 July to 13 August 2019), 99°E to 129°E and 1.5°N to 30°N at 1/32° resolution; MITgcm on the left, TorchOcean on the right. Colour shows speed; white particles move with the flow, start from the same positions in both panels, and are sped up for display. The video uses model output every 6 hours, interpolated linearly in time and averaged over 3×3 cells. <i>Difference</i> replaces the left panel with the magnitude of the velocity difference between the models, as the rms over 3×3 cells on a log scale; the darkest colour is 10<sup>−9</sup> m/s or less. The small chart is the RMS temperature difference over all wet cells during the first 3 days: TorchOcean minus MITgcm (blue) follows the difference between two MITgcm runs with different process layouts (orange); both peak on day 1.75, within 3% of each other, so TorchOcean differs from MITgcm by the size of a rounding perturbation.</span>
-          </figcaption>
         </figure>
       </section>
-      <section id="architecture" aria-labelledby="h-architecture">
-        <h2 id="h-architecture"><span lang="zh-CN">结构</span><span lang="en">Architecture</span></h2>
-        <p lang="zh-CN">模式支持区域、全球经纬度和立方球网格，静力和非静力方程，以及开边界、KPP 垂向混合和潮汐强迫。代码约 12.8 万行 Python 和 1.5 万行 CUDA C++。</p>
-        <p lang="en">The model runs regional, global latitude–longitude and cubed-sphere grids with hydrostatic or nonhydrostatic equations, open boundaries, KPP vertical mixing and tidal forcing. The code is about 128,000 lines of Python and 15,000 lines of CUDA C++.</p>
-        <p lang="zh-CN">一个时间步分五个阶段，三处隐式求解的反向按转置方程或隐函数定理求导，不展开迭代；控制量从初始化和强迫进入，神经网络的参数也在其中。同化窗口的梯度按段存起始状态，反向时逐段重算并回传。执行上，纯 PyTorch 参照实现之上，整步编译、手写 CUDA 核和多卡区域分解可以分别开关，开与不开只差舍入误差。</p>
-        <p lang="en">A time step has five stages; the three implicit solves are differentiated through transposed solves or the implicit function theorem rather than through their iterations. Controls enter through the initialization and the forcing, and the parameters of a neural network are among them. The gradient of an assimilation window stores the first state of each segment and recomputes segment by segment in reverse. On top of the plain PyTorch reference, whole-step compilation, hand-written CUDA kernels and multi-GPU domain decomposition can each be switched on or off and change results only by rounding.</p>
-        <figure class="plate plate-arch" data-zoom="1100">
-          <button type="button" class="plate-open">
-            <img lang="zh-CN" src="assets/fig-arch-zh.svg" width="700" height="596" loading="lazy"
-                 alt="TorchOcean 结构图：上半是一个时间步的五个阶段、控制量进入的位置和对应的伴随计算，下半是同化窗口的分段检查点与反向重算。">
-            <img lang="en" src="assets/fig-arch-en.svg" width="700" height="596" loading="lazy"
-                 alt="TorchOcean architecture: the five stages of a time step with the entry points of the controls and the matching adjoint computation, and the segmented checkpoints and reverse recomputation of an assimilation window.">
-            <span class="zoom-hint" aria-hidden="true"><span lang="zh-CN">放大</span><span lang="en">Enlarge</span></span>
-          </button>
-          <figcaption>
-            <span lang="zh-CN"><b>图 2</b>　(a) 一个时间步的五个阶段，控制量（初始场、网络参数、强迫记录）进入的位置，下方橙色是同一步的伴随计算。(b) 同化窗口的梯度：正向积分时在观测时刻把失配累加进代价函数 J，每段存一个起始状态，检查点先放显存、超出预算放主机内存；反向时取回段首状态逐位重算这一段，再回传伴随并在观测处加上失配的导数。</span>
-            <span lang="en"><b>Figure 2.</b> (a) The five stages of a time step, where the controls (initial fields, network parameters, forcing records) enter, and in orange the adjoint computation of the same step. (b) The gradient of an assimilation window: the forward integration adds each misfit to the cost function J at its observation time and stores the first state of each segment, in GPU memory within a budget and in host memory beyond it; the reverse pass restores a segment's first state, recomputes the segment bit for bit, and passes the adjoint back, adding the misfit derivative at each observation.</span>
-          </figcaption>
-        </figure>
-      </section>
-      <section id="performance" aria-labelledby="h-performance">
-        <h2 id="h-performance"><span lang="zh-CN">性能</span><span lang="en">Performance</span></h2>
-        <figure class="plate" data-zoom="1200">
-          <button type="button" class="plate-open">
-            <picture lang="zh-CN"><source media="(max-width: 600px)" srcset="assets/fig-perf-zh-m.svg" width="560" height="1075"><img src="assets/fig-perf-zh.svg" width="1200" height="480"
-                 alt="两幅折线图：左图 N×N×90 网格从 160 到 1320 的每步耗时，TorchOcean 单卡、双卡和非静力双卡，灰色为 MITgcm 各网格最快核数的耗时；右图 960×960×90 网格 MITgcm 从 100 到 800 核的阶梯，TorchOcean 双卡 142 ms 相当于 668 核。"></picture>
-            <picture lang="en"><source media="(max-width: 600px)" srcset="assets/fig-perf-en-m.svg" width="560" height="1075"><img src="assets/fig-perf-en.svg" width="1200" height="480"
-                 alt="Two line charts: time per step on N×N×90 grids from 160 to 1320 for TorchOcean on one GPU, two GPUs and nonhydrostatic on two GPUs, with MITgcm's fastest core count per grid in gray; and the MITgcm core ladder on the 960×960×90 grid, where two TorchOcean GPUs at 142 ms match 668 cores."></picture>
-            <span class="zoom-hint" aria-hidden="true"><span lang="zh-CN">放大</span><span lang="en">Enlarge</span></span>
-          </button>
-          <figcaption>
-            <span lang="zh-CN"><b>图 3</b>　双精度模拟的每步耗时。(a) N×N×90 网格从 N=160 到 1320：TorchOcean 静力单卡（空心）、静力双卡（实心）和非静力双卡（方块）；灰线是 MITgcm 在测过的核数里最快的一档，灰方块是非静力 MITgcm 用 400 核。(b) 960×960×90 网格上 MITgcm 从 100 到 800 核的阶梯，与 TorchOcean 单卡 257 ms、双卡 142 ms 两条水平线，双卡相当于约 668 核。计时取 100 步里后 80 步的中位数，不含输入输出；GPU 是 A800 80 GB。</span>
-            <span lang="en"><b>Figure 3.</b> Time per step of double-precision simulations. (a) N×N×90 grids from N=160 to 1320: TorchOcean hydrostatic on one GPU (open) and two GPUs (filled) and nonhydrostatic on two GPUs (squares); in gray, the fastest MITgcm time of each grid over the tested core counts, and MITgcm nonhydrostatic on 400 cores. (b) The MITgcm core ladder on the 960×960×90 grid from 100 to 800 cores against the TorchOcean one-GPU 257 ms and two-GPU 142 ms lines; two GPUs match about 668 cores. Times are medians of the last 80 of 100 steps, excluding I/O, on A800 80 GB GPUs.</span>
-          </figcaption>
-        </figure>
-        <p lang="zh-CN">从 N=480 起，两张 A800 的每步耗时与 MITgcm 测到的最快核数相当；960×960×90 网格（8294 万个格点）上两卡 142 毫秒，MITgcm 用 576 核 162 毫秒、768 核 126 毫秒。非静力算例多解一个三维压力方程，两卡 422 毫秒，MITgcm 用 400 核 1421 毫秒。单卡每格点每步 3.1 纳秒，与 GPU 海洋模式 Oceananigans 同一量级。</p>
-        <p lang="en">From N=480 on, two A800 GPUs take as long per step as the fastest MITgcm core count measured; on the 960×960×90 grid (82.9 million cells) two GPUs take 142 ms, against MITgcm's 162 ms on 576 cores and 126 ms on 768 cores. The nonhydrostatic case, which adds a three-dimensional pressure equation, takes 422 ms on two GPUs against 1421 ms for MITgcm on 400 cores. One GPU spends 3.1 ns per cell per step, the same order as the GPU ocean model Oceananigans.</p>
-        <p lang="zh-CN">同一算例从 PyTorch 直接执行时的每步 786 毫秒降到 142 毫秒，主要做了三件事。</p>
-        <p lang="en">The same case went from 786 ms per step under plain PyTorch execution to 142 ms. The main work was:</p>
-        <ul class="ticks">
-          <li>
-            <span lang="zh-CN">重构时间步代码，解决 torch.compile 的编译碎片和每步重编译。原先每步碎成 131 段、6 个函数退回未编译执行，改造后整步只在求解器处断开，稳态不再重编译。</span>
-            <span lang="en">Restructuring the time step so torch.compile no longer fragments it or recompiles every step. A step used to break into 131 pieces with 6 functions falling back to uncompiled execution; now it breaks only at the solver and stops recompiling once warm.</span>
-          </li>
-          <li>
-            <span lang="zh-CN">手写 43 个 CUDA kernel，把 KPP 混合、隐式垂向平流、示踪物平流和水平黏性的多步计算各合并成一个 kernel。KPP 边界层深度计算的 kernel 启动从 2786 次降到 2 次，比 PyTorch 实现快 80 倍以上。其中 6 个 kernel 带手写反向。</span>
-            <span lang="en">Writing 43 CUDA kernels that fuse the multi-step computations of KPP mixing, implicit vertical advection, tracer advection and horizontal viscosity into one kernel each. The KPP boundary-layer depth went from 2,786 kernel launches to 2 and runs more than 80 times faster than the PyTorch version. Six kernels have hand-written backward passes.</span>
-          </li>
-          <li>
-            <span lang="zh-CN">给卡间通信加上数据依赖，解决编译器重排通信导致的多卡死锁；960×960×90 网格上双卡比单卡快 1.8 倍。</span>
-            <span lang="en">Adding data dependencies to the exchanges to fix a multi-GPU deadlock caused by the compiler reordering communication; on the 960×960×90 grid two GPUs are 1.8 times faster than one.</span>
-          </li>
-        </ul>
-        <p lang="zh-CN">梯度计算把检查点按显存余量放在显存或主机内存，求解器的反向用隐式微分；网格到 N=960 为止，一次代价函数加梯度的耗时是全速正向积分的 2.8 到 4.4 倍。</p>
-        <p lang="en">For gradients, checkpoints go to GPU or host memory depending on free space, and the solvers are differentiated implicitly; up to N=960, one evaluation of the cost function and its gradient costs 2.8 to 4.4 times the full-speed forward integration.</p>
-      </section>
-      <section id="assimilation" aria-labelledby="h-assimilation">
-        <h2 id="h-assimilation"><span lang="zh-CN">四维变分同化</span><span lang="en">4D-Var data assimilation</span></h2>
-        <p lang="zh-CN">南海孪生试验：真值由 MITgcm 从 GLORYS 再分析起算，背景由 MITgcm 从 HYCOM 分析起算，观测从真值轨迹抽样再加噪声，有海面高度轨道、海表温度块和温盐剖面。网格 160×152×41，同化窗一天，共 52 个窗，其中 2020 年的 4 个是测试窗；每窗用 L-BFGS 迭代 30 次。</p>
-        <p lang="en">Twin experiments in the South China Sea: the truth is an MITgcm integration started from the GLORYS reanalysis, the background one started from the HYCOM analysis, and the observations are sampled from the true trajectory with noise added: SSH tracks, SST blocks and temperature and salinity profiles. The grid is 160×152×41, the window one day, and there are 52 windows, of which the 4 in 2020 are test windows; each window runs 30 L-BFGS iterations.</p>
-        <figure class="plate" data-zoom="1200">
-          <button type="button" class="plate-open">
-            <picture lang="zh-CN"><source media="(max-width: 600px)" srcset="assets/fig-da-zh-m.svg" width="560" height="1072"><img src="assets/fig-da-zh.svg" width="1200" height="563" loading="lazy"
-                 alt="左图：窗后 0 到 5 天的预报误差 Q，4D-Var 在每个时效都低于背景，3 天时 0.557 对 0.809。右图四幅地图：上排真值减背景的海表温度和海面高度，下排 4D-Var 的分析增量，空间结构对应。"></picture>
-            <picture lang="en"><source media="(max-width: 600px)" srcset="assets/fig-da-en-m.svg" width="560" height="1072"><img src="assets/fig-da-en.svg" width="1200" height="563" loading="lazy"
-                 alt="Left: forecast error Q from 0 to 5 days after the window; 4D-Var is below the background at every lead time, 0.557 against 0.809 at 3 days. Right: four maps, truth minus background for SST and SSH on top and the 4D-Var increments below, with matching spatial structure."></picture>
-            <span class="zoom-hint" aria-hidden="true"><span lang="zh-CN">放大</span><span lang="en">Enlarge</span></span>
-          </button>
-          <figcaption>
-            <span lang="zh-CN"><b>图 4</b>　(a) 窗后 0 到 5 天的预报误差 Q（温盐、流速、海面高度的归一化均方误差），52 窗平均：背景预报、4D-Var 分析起算的预报、把窗末真值固定不动的持续性参照、真值初始场起算的预报（误差只来自模式与真值运行的差别，接近 0）。灰区是同化窗。(b) 2020 年 1 月 10 日起的测试窗：上排是真值减背景的海表温度和海面高度，下排是 4D-Var 的分析增量，同列用同一色标。</span>
-            <span lang="en"><b>Figure 4.</b> (a) Forecast error Q (normalized mean-square error of temperature, salinity, velocity and SSH) from 0 to 5 days after the window, averaged over 52 windows: the background forecast, the forecast from the 4D-Var analysis, a persistence reference that holds the true state at the end of the window, and the forecast from the true initial state (its error comes only from the difference between the model and the truth run, and is close to 0). The gray band is the assimilation window. (b) The test window starting 10 January 2020: truth minus background for SST and SSH on top, the 4D-Var increments below, one colour scale per column.</span>
-          </figcaption>
-        </figure>
-        <p lang="zh-CN">窗后 3 天的预报误差 52 窗平均从 0.809 降到 0.557，降低 31%，52 个窗无一例外；4 个测试窗降 28%，海面高度均方根误差降 33%。初始时刻的分析增量与真实背景误差的相关系数中位数，海表温度 0.82、温度 0.61。</p>
-        <p lang="en">Three days after the window, Q averaged over the 52 windows falls from 0.809 to 0.557, a 31% reduction, and it falls in every one of the 52 windows; on the 4 test windows Q falls by 28% and the RMS SSH error by 33%. The analysis increments at the start of the window correlate with the true background error with median coefficients of 0.82 for SST and 0.61 for temperature.</p>
-        <p lang="zh-CN">一次代价函数加梯度在一张 A800 上 29 秒，一个窗 30 次迭代中位 884 秒。KPP 对流混合系数对浮力跃变的敏感依赖会让长窗口的梯度逐步放大，原先 10 天窗的梯度达到 10<sup>28</sup>；TorchOcean 把温盐和对流系数按列在新时刻联立牛顿求解，用隐函数定理求导，方向导数与差分的相对误差约 10<sup>−6</sup>。</p>
-        <p lang="en">One evaluation of the cost function and its gradient takes 29 s on one A800, and a 30-iteration window a median of 884 s. The sharp dependence of the KPP convective diffusivity on the buoyancy jump amplifies gradients over long windows step by step; a ten-day window used to reach 10<sup>28</sup>. TorchOcean instead solves temperature, salinity and the convective diffusivity of each column together at the new time level with a Newton iteration and differentiates the solution through the implicit function theorem; directional derivatives agree with finite differences to a relative error of about 10<sup>−6</sup>.</p>
-      </section>
-      <section id="hybrid" aria-labelledby="h-hybrid">
-        <h2 id="h-hybrid"><span lang="zh-CN">混合建模：在同化里训练模式内的网络</span><span lang="en">Hybrid modeling: training a network inside the assimilation</span></h2>
-        <p lang="zh-CN">调整初始场的那次反向积分，同样能把梯度传到产生初始场的神经网络。网络读入一个窗的观测和背景轨迹，直接输出控制量；在线训练的损失就是该窗的 4D-Var 代价函数，梯度穿过 TorchOcean 的积分到达网络参数，不需要目标分析场。对照是离线训练：同一网络拟合各训练窗的 4D-Var 分析场，训练时不跑模式。</p>
-        <p lang="en">The reverse integration that adjusts the initial state also carries the gradient to a neural network that produces the initial state. The network reads the observations and the background trajectory of a window and outputs the controls directly. In online training the loss is the 4D-Var cost function of that window, so the gradient passes through the TorchOcean integration to the network parameters and no target analyses are needed. The comparison is offline training: the same network is fitted to the 4D-Var analyses of the training windows, and the model is not integrated during training.</p>
-        <table class="results">
-          <caption>
-            <span lang="zh-CN"><b>表 1</b>　8 个验证窗和 4 个测试窗的平均。补上的差距指背景到 4D-Var 的 Q 之差中被补上的份额；耗时是每窗的 GPU 秒，不含网络的训练。</span>
-            <span lang="en"><b>Table 1.</b> Averages over the 8 validation and 4 test windows. The gap closed is the share of the difference in Q between the background and 4D-Var; the cost is GPU seconds per window, excluding the training of the networks.</span>
-          </caption>
-          <thead>
-            <tr>
-              <th><span lang="zh-CN">分析场</span><span lang="en">Analysis</span></th>
-              <th><span lang="zh-CN">窗后 3 天误差 Q</span><span lang="en">Q at 3 d</span></th>
-              <th><span lang="zh-CN">补上的差距</span><span lang="en">Gap closed</span></th>
-              <th><span lang="zh-CN">每窗耗时</span><span lang="en">Cost (s)</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td><span lang="zh-CN">背景</span><span lang="en">Background</span></td><td>0.803</td><td>0%</td><td>0</td></tr>
-            <tr><td><span lang="zh-CN">4D-Var，30 次迭代</span><span lang="en">4D-Var, 30 iterations</span></td><td>0.575</td><td>100%</td><td>1412</td></tr>
-            <tr><td><span lang="zh-CN">在线训练的网络</span><span lang="en">Network trained online</span></td><td>0.606</td><td>86%</td><td>19</td></tr>
-            <tr><td><span lang="zh-CN">离线训练的网络</span><span lang="en">Network trained offline</span></td><td>0.633</td><td>75%</td><td>16</td></tr>
-            <tr><td><span lang="zh-CN">在线网络的分析场再做 5 次迭代</span><span lang="en">Online network, then 5 iterations</span></td><td>0.580</td><td>98%</td><td>407</td></tr>
-          </tbody>
-        </table>
-        <p lang="zh-CN">两个网络的分析场都落在背景和 4D-Var 之间；在线训练的网络在 4 个测试窗上补上差距的 86%，离线的 77%，每窗耗时只有 4D-Var 的 1% 到 2%。从在线网络的分析场出发再做 5 次迭代，补到 98%，耗时是完整 4D-Var 的 29%。梯度能到达同化内部的网络参数，在线训练就是把网络参数放进控制向量的强约束 4D-Var；同样的反向积分也能训练模式内部的网络。</p>
-        <p lang="en">Both networks' analyses lie between the background and 4D-Var; on the 4 test windows the online network closes 86% of the gap and the offline one 77%, at 1% to 2% of the 4D-Var cost per window. Five more iterations from the online network's analysis close 98% at 29% of the full 4D-Var cost. The gradient reaches the network parameters inside the assimilation, and online training is strong-constraint 4D-Var with the network parameters in the control vector; the same reverse integration can train networks inside the model.</p>
-      </section>
+
+      <div class="tabs" role="tablist" aria-label="TorchOcean">
+        <button type="button" class="tab" role="tab" id="tab-architecture" aria-controls="architecture" aria-selected="true">
+          <span class="tab-n">01</span>
+          <span class="tab-t"><span lang="zh-CN">结构</span><span lang="en">Architecture</span></span>
+          <span class="tab-s"><span lang="zh-CN">三处隐式求解求导不展开迭代</span><span lang="en">Solves differentiated without unrolling</span></span>
+        </button>
+        <button type="button" class="tab" role="tab" id="tab-performance" aria-controls="performance" aria-selected="false" tabindex="-1">
+          <span class="tab-n">02</span>
+          <span class="tab-t"><span lang="zh-CN">性能</span><span lang="en">Performance</span></span>
+          <span class="tab-s"><span lang="zh-CN">两张 A800 相当于 MITgcm 668 核</span><span lang="en">Two A800 GPUs match 668 MITgcm cores</span></span>
+        </button>
+        <button type="button" class="tab" role="tab" id="tab-assimilation" aria-controls="assimilation" aria-selected="false" tabindex="-1">
+          <span class="tab-n">03</span>
+          <span class="tab-t"><span lang="zh-CN">变分同化</span><span lang="en">4D-Var</span></span>
+          <span class="tab-s"><span lang="zh-CN">窗后 3 天预报误差降 31%</span><span lang="en">3-day forecast error down 31%</span></span>
+        </button>
+        <button type="button" class="tab" role="tab" id="tab-hybrid" aria-controls="hybrid" aria-selected="false" tabindex="-1">
+          <span class="tab-n">04</span>
+          <span class="tab-t"><span lang="zh-CN">混合建模</span><span lang="en">Hybrid modeling</span></span>
+          <span class="tab-s"><span lang="zh-CN">在线训练的网络补上 86% 的差距</span><span lang="en">Online network closes 86% of the gap</span></span>
+        </button>
+      </div>
+
+      <div class="panels">
+        <section id="architecture" class="panel is-active" role="tabpanel" aria-labelledby="tab-architecture">
+          <h2><span lang="zh-CN">结构</span><span lang="en">Architecture</span></h2>
+          <div class="panel-text">
+            <p lang="zh-CN">模式支持区域、全球经纬度和立方球网格，静力和非静力方程，以及开边界、KPP 垂向混合和潮汐强迫。代码约 12.8 万行 Python 和 1.5 万行 CUDA C++。</p>
+            <p lang="en">The model runs regional, global latitude–longitude and cubed-sphere grids with hydrostatic or nonhydrostatic equations, open boundaries, KPP vertical mixing and tidal forcing. The code is about 128,000 lines of Python and 15,000 lines of CUDA C++.</p>
+            <p lang="zh-CN">一个时间步分五个阶段，三处隐式求解的反向按转置方程或隐函数定理求导，不展开迭代；控制量从初始化和强迫进入，神经网络的参数也在其中。同化窗口的梯度按段存起始状态，反向时逐段重算并回传。</p>
+            <p lang="en">A time step has five stages; the three implicit solves are differentiated through transposed solves or the implicit function theorem rather than through their iterations. Controls enter through the initialization and the forcing, and the parameters of a neural network are among them. The gradient of an assimilation window stores the first state of each segment and recomputes segment by segment in reverse.</p>
+            <p lang="zh-CN">纯 PyTorch 参照实现之上，整步编译、手写 CUDA 核和多卡区域分解可以分别开关，开与不开只差舍入误差。</p>
+            <p lang="en">On top of the plain PyTorch reference, whole-step compilation, hand-written CUDA kernels and multi-GPU domain decomposition can each be switched on or off and change results only by rounding.</p>
+          </div>
+          <figure class="panel-fig fig-arch" data-zoom="1100">
+            <button type="button" class="plate-open">
+              <img lang="zh-CN" src="assets/fig-arch-zh.svg" width="700" height="596" loading="lazy"
+                   alt="TorchOcean 结构图：上半是一个时间步的五个阶段、控制量进入的位置和对应的伴随计算，下半是同化窗口的分段检查点与反向重算。">
+              <img lang="en" src="assets/fig-arch-en.svg" width="700" height="596" loading="lazy"
+                   alt="TorchOcean architecture: the five stages of a time step with the entry points of the controls and the matching adjoint computation, and the segmented checkpoints and reverse recomputation of an assimilation window.">
+              <span class="zoom-hint" aria-hidden="true"><span lang="zh-CN">放大</span><span lang="en">Enlarge</span></span>
+            </button>
+            <figcaption>
+              <span class="cap" lang="zh-CN"><b>图 2</b>　一个时间步的五个阶段与伴随（橙色），以及同化窗口的分段检查点与反向重算。</span>
+              <span class="cap" lang="en"><b>Figure 2.</b> The five stages of a time step with their adjoint (orange), and the segmented checkpoints and reverse recomputation of an assimilation window.</span>
+              <span class="cap-full" lang="zh-CN"><b>图 2</b>　(a) 一个时间步的五个阶段，控制量（初始场、网络参数、强迫记录）进入的位置，下方橙色是同一步的伴随计算。(b) 同化窗口的梯度：正向积分时在观测时刻把失配累加进代价函数 J，每段存一个起始状态，检查点先放显存、超出预算放主机内存；反向时取回段首状态逐位重算这一段，再回传伴随并在观测处加上失配的导数。</span>
+              <span class="cap-full" lang="en"><b>Figure 2.</b> (a) The five stages of a time step, where the controls (initial fields, network parameters, forcing records) enter, and in orange the adjoint computation of the same step. (b) The gradient of an assimilation window: the forward integration adds each misfit to the cost function J at its observation time and stores the first state of each segment, in GPU memory within a budget and in host memory beyond it; the reverse pass restores a segment's first state, recomputes the segment bit for bit, and passes the adjoint back, adding the misfit derivative at each observation.</span>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="performance" class="panel" role="tabpanel" aria-labelledby="tab-performance">
+          <h2><span lang="zh-CN">性能</span><span lang="en">Performance</span></h2>
+          <div class="panel-text">
+            <p lang="zh-CN">从 N=480 起，两张 A800 的每步耗时与 MITgcm 测到的最快核数相当。960×960×90 网格（8294 万个格点）上两卡 142 毫秒，MITgcm 用 576 核 162 毫秒、768 核 126 毫秒；非静力算例两卡 422 毫秒，MITgcm 用 400 核 1421 毫秒。</p>
+            <p lang="en">From N=480 on, two A800 GPUs take as long per step as the fastest MITgcm core count measured. On the 960×960×90 grid (82.9 million cells) two GPUs take 142 ms, against 162 ms for MITgcm on 576 cores and 126 ms on 768; the nonhydrostatic case takes 422 ms on two GPUs against 1421 ms on 400 cores.</p>
+            <p lang="zh-CN">同一算例从 PyTorch 直接执行时的每步 786 毫秒降到 142 毫秒：</p>
+            <p lang="en">The same case went from 786 ms per step under plain PyTorch to 142 ms:</p>
+            <ul class="ticks">
+              <li>
+                <span lang="zh-CN">重构时间步，整步编译只在求解器处断开；原先每步碎成 131 段并反复重编译。</span>
+                <span lang="en">The time step was restructured so torch.compile breaks only at the solver; it used to split into 131 pieces and recompile every step.</span>
+              </li>
+              <li>
+                <span lang="zh-CN">手写 43 个 CUDA 核，合并 KPP 混合、隐式垂向平流、示踪物平流和水平黏性；KPP 边界层深度的核启动从 2786 次降到 2 次，快 80 倍以上。</span>
+                <span lang="en">43 CUDA kernels fuse KPP mixing, implicit vertical advection, tracer advection and horizontal viscosity; the KPP boundary-layer depth went from 2,786 launches to 2 and runs over 80 times faster.</span>
+              </li>
+              <li>
+                <span lang="zh-CN">给卡间通信加数据依赖，修好编译器重排通信造成的多卡死锁；双卡比单卡快 1.8 倍。</span>
+                <span lang="en">Data dependencies on the exchanges fix a multi-GPU deadlock caused by the compiler reordering communication; two GPUs are 1.8 times faster than one.</span>
+              </li>
+            </ul>
+            <p lang="zh-CN">到 N=960 为止，一次代价函数加梯度的耗时是全速正向积分的 2.8 到 4.4 倍。</p>
+            <p lang="en">Up to N=960, one evaluation of the cost function and its gradient costs 2.8 to 4.4 times the full-speed forward integration.</p>
+          </div>
+          <figure class="panel-fig" data-zoom="1200">
+            <button type="button" class="plate-open">
+              <picture lang="zh-CN"><source media="(max-width: 600px)" srcset="assets/fig-perf-zh-m.svg" width="560" height="1075"><img src="assets/fig-perf-zh.svg" width="1200" height="480" loading="lazy"
+                   alt="两幅折线图：左图 N×N×90 网格从 160 到 1320 的每步耗时，TorchOcean 单卡、双卡和非静力双卡，灰色为 MITgcm 各网格最快核数的耗时；右图 960×960×90 网格 MITgcm 从 100 到 800 核的阶梯，TorchOcean 双卡 142 ms 相当于 668 核。"></picture>
+              <picture lang="en"><source media="(max-width: 600px)" srcset="assets/fig-perf-en-m.svg" width="560" height="1075"><img src="assets/fig-perf-en.svg" width="1200" height="480" loading="lazy"
+                   alt="Two line charts: time per step on N×N×90 grids from 160 to 1320 for TorchOcean on one GPU, two GPUs and nonhydrostatic on two GPUs, with MITgcm's fastest core count per grid in gray; and the MITgcm core ladder on the 960×960×90 grid, where two TorchOcean GPUs at 142 ms match 668 cores."></picture>
+              <span class="zoom-hint" aria-hidden="true"><span lang="zh-CN">放大</span><span lang="en">Enlarge</span></span>
+            </button>
+            <figcaption>
+              <span class="cap" lang="zh-CN"><b>图 3</b>　双精度模拟的每步耗时。(a) N×N×90 网格；(b) N=960 时 MITgcm 的核数阶梯与 TorchOcean 单卡、双卡。</span>
+              <span class="cap" lang="en"><b>Figure 3.</b> Time per step in double precision. (a) N×N×90 grids; (b) the MITgcm core ladder at N=960 against TorchOcean on one and two GPUs.</span>
+              <span class="cap-full" lang="zh-CN"><b>图 3</b>　双精度模拟的每步耗时。(a) N×N×90 网格从 N=160 到 1320：TorchOcean 静力单卡（空心）、静力双卡（实心）和非静力双卡（方块）；灰线是 MITgcm 在测过的核数里最快的一档，灰方块是非静力 MITgcm 用 400 核。(b) 960×960×90 网格上 MITgcm 从 100 到 800 核的阶梯，与 TorchOcean 单卡 257 ms、双卡 142 ms 两条水平线，双卡相当于约 668 核。计时取 100 步里后 80 步的中位数，不含输入输出；GPU 是 A800 80 GB。</span>
+              <span class="cap-full" lang="en"><b>Figure 3.</b> Time per step of double-precision simulations. (a) N×N×90 grids from N=160 to 1320: TorchOcean hydrostatic on one GPU (open) and two GPUs (filled) and nonhydrostatic on two GPUs (squares); in gray, the fastest MITgcm time of each grid over the tested core counts, and MITgcm nonhydrostatic on 400 cores. (b) The MITgcm core ladder on the 960×960×90 grid from 100 to 800 cores against the TorchOcean one-GPU 257 ms and two-GPU 142 ms lines; two GPUs match about 668 cores. Times are medians of the last 80 of 100 steps, excluding I/O, on A800 80 GB GPUs.</span>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="assimilation" class="panel" role="tabpanel" aria-labelledby="tab-assimilation">
+          <h2><span lang="zh-CN">四维变分同化</span><span lang="en">4D-Var data assimilation</span></h2>
+          <div class="panel-text">
+            <p lang="zh-CN">南海孪生试验：真值由 MITgcm 从 GLORYS 再分析起算，背景从 HYCOM 分析起算，观测从真值轨迹抽样再加噪声，有海面高度轨道、海表温度块和温盐剖面。网格 160×152×41，同化窗一天，共 52 个窗，2020 年的 4 个是测试窗；每窗用 L-BFGS 迭代 30 次。</p>
+            <p lang="en">Twin experiments in the South China Sea: the truth is an MITgcm integration started from the GLORYS reanalysis, the background one started from the HYCOM analysis, and the observations (SSH tracks, SST blocks, temperature and salinity profiles) are sampled from the truth with noise. The grid is 160×152×41 and the window one day; of the 52 windows, the 4 in 2020 are test windows. Each window runs 30 L-BFGS iterations.</p>
+            <p lang="zh-CN">窗后 3 天的预报误差 52 窗平均从 0.809 降到 0.557，降低 31%，52 个窗无一例外；4 个测试窗降 28%，海面高度均方根误差降 33%。初始时刻的分析增量与真实背景误差的相关系数中位数，海表温度 0.82、温度 0.61。</p>
+            <p lang="en">Three days after the window, Q averaged over the 52 windows falls from 0.809 to 0.557, a 31% reduction, and it falls in every window; on the test windows Q falls by 28% and the RMS SSH error by 33%. The increments correlate with the true background error with median coefficients of 0.82 for SST and 0.61 for temperature.</p>
+            <p lang="zh-CN">一次代价函数加梯度在一张 A800 上 29 秒，每窗中位 884 秒。KPP 对流混合系数对浮力跃变的敏感依赖曾让 10 天窗的梯度放大到 10<sup>28</sup>；TorchOcean 按列在新时刻联立牛顿求解温盐和对流系数，用隐函数定理求导，方向导数与差分的相对误差约 10<sup>−6</sup>。</p>
+            <p lang="en">One cost-and-gradient evaluation takes 29 s on one A800, a window a median of 884 s. The sharp dependence of the KPP convective diffusivity on the buoyancy jump once amplified the gradient of a ten-day window to 10<sup>28</sup>; TorchOcean solves temperature, salinity and the convective diffusivity of each column together with a Newton iteration and differentiates through the implicit function theorem, matching finite differences to about 10<sup>−6</sup>.</p>
+          </div>
+          <figure class="panel-fig" data-zoom="1200">
+            <button type="button" class="plate-open">
+              <picture lang="zh-CN"><source media="(max-width: 600px)" srcset="assets/fig-da-zh-m.svg" width="560" height="1072"><img src="assets/fig-da-zh.svg" width="1200" height="563" loading="lazy"
+                   alt="左图：窗后 0 到 5 天的预报误差 Q，4D-Var 在每个时效都低于背景，3 天时 0.557 对 0.809。右图四幅地图：上排真值减背景的海表温度和海面高度，下排 4D-Var 的分析增量，空间结构对应。"></picture>
+              <picture lang="en"><source media="(max-width: 600px)" srcset="assets/fig-da-en-m.svg" width="560" height="1072"><img src="assets/fig-da-en.svg" width="1200" height="563" loading="lazy"
+                   alt="Left: forecast error Q from 0 to 5 days after the window; 4D-Var is below the background at every lead time, 0.557 against 0.809 at 3 days. Right: four maps, truth minus background for SST and SSH on top and the 4D-Var increments below, with matching spatial structure."></picture>
+              <span class="zoom-hint" aria-hidden="true"><span lang="zh-CN">放大</span><span lang="en">Enlarge</span></span>
+            </button>
+            <figcaption>
+              <span class="cap" lang="zh-CN"><b>图 4</b>　(a) 窗后 0 到 5 天的预报误差 Q，52 窗平均；(b) 一个测试窗的真值减背景（上）与 4D-Var 增量（下）。</span>
+              <span class="cap" lang="en"><b>Figure 4.</b> (a) Forecast error Q 0 to 5 days after the window, mean of 52 windows; (b) truth minus background (top) and the 4D-Var increment (bottom) in a test window.</span>
+              <span class="cap-full" lang="zh-CN"><b>图 4</b>　(a) 窗后 0 到 5 天的预报误差 Q（温盐、流速、海面高度的归一化均方误差），52 窗平均：背景预报、4D-Var 分析起算的预报、把窗末真值固定不动的持续性参照、真值初始场起算的预报（误差只来自模式与真值运行的差别，接近 0）。灰区是同化窗。(b) 2020 年 1 月 10 日起的测试窗：上排是真值减背景的海表温度和海面高度，下排是 4D-Var 的分析增量，同列用同一色标。</span>
+              <span class="cap-full" lang="en"><b>Figure 4.</b> (a) Forecast error Q (normalized mean-square error of temperature, salinity, velocity and SSH) from 0 to 5 days after the window, averaged over 52 windows: the background forecast, the forecast from the 4D-Var analysis, a persistence reference that holds the true state at the end of the window, and the forecast from the true initial state (its error comes only from the difference between the model and the truth run, and is close to 0). The gray band is the assimilation window. (b) The test window starting 10 January 2020: truth minus background for SST and SSH on top, the 4D-Var increments below, one colour scale per column.</span>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="hybrid" class="panel" role="tabpanel" aria-labelledby="tab-hybrid">
+          <h2><span lang="zh-CN">混合建模：在同化里训练模式内的网络</span><span lang="en">Hybrid modeling: training a network inside the assimilation</span></h2>
+          <div class="panel-text">
+            <p lang="zh-CN">调整初始场的那次反向积分，同样能把梯度传到产生初始场的神经网络。网络读入一个窗的观测和背景轨迹，直接输出控制量。在线训练的损失就是该窗的 4D-Var 代价函数，梯度穿过 TorchOcean 的积分到达网络参数，不需要目标分析场；对照的离线训练让同一网络拟合各训练窗的 4D-Var 分析场，训练时不跑模式。</p>
+            <p lang="en">The reverse integration that adjusts the initial state also carries the gradient to a neural network that produces it. The network reads the observations and background trajectory of a window and outputs the controls. In online training the loss is the window's 4D-Var cost function, so the gradient passes through the TorchOcean integration to the network and no target analyses are needed; the offline comparison fits the same network to the 4D-Var analyses without integrating the model.</p>
+            <p lang="zh-CN">在 4 个测试窗上，在线训练的网络补上差距的 86%，离线的 77%，每窗耗时只有 4D-Var 的 1% 到 2%；从在线网络的分析场再迭代 5 次，补到 98%，耗时是完整 4D-Var 的 29%。在线训练就是把网络参数放进控制向量的强约束 4D-Var；同样的反向积分也能训练模式内部的网络。</p>
+            <p lang="en">On the 4 test windows the online network closes 86% of the gap and the offline one 77%, at 1% to 2% of the 4D-Var cost; five more iterations from the online analysis close 98% at 29% of the full cost. Online training is strong-constraint 4D-Var with the network parameters in the control vector, and the same reverse integration can train networks inside the model.</p>
+          </div>
+          <div class="panel-fig">
+            <table class="results">
+              <caption>
+                <span lang="zh-CN"><b>表 1</b>　8 个验证窗和 4 个测试窗的平均。补上的差距指背景到 4D-Var 的 Q 之差中被补上的份额；耗时是每窗的 GPU 秒，不含网络的训练。</span>
+                <span lang="en"><b>Table 1.</b> Averages over the 8 validation and 4 test windows. The gap closed is the share of the difference in Q between the background and 4D-Var; the cost is GPU seconds per window, excluding the training of the networks.</span>
+              </caption>
+              <thead>
+                <tr>
+                  <th><span lang="zh-CN">分析场</span><span lang="en">Analysis</span></th>
+                  <th><span lang="zh-CN">窗后 3 天 Q</span><span lang="en">Q at 3&nbsp;d</span></th>
+                  <th><span lang="zh-CN">补上的差距</span><span lang="en">Gap closed</span></th>
+                  <th><span lang="zh-CN">每窗耗时（秒）</span><span lang="en">Cost&nbsp;(s)</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><span lang="zh-CN">背景</span><span lang="en">Background</span></td><td>0.803</td><td><span class="bar" style="--v:0"></span><span>0%</span></td><td>0</td></tr>
+                <tr><td><span lang="zh-CN">4D-Var，30 次迭代</span><span lang="en">4D-Var, 30 iterations</span></td><td>0.575</td><td><span class="bar" style="--v:1"></span><span>100%</span></td><td>1412</td></tr>
+                <tr class="hl"><td><span lang="zh-CN">在线训练的网络</span><span lang="en">Network trained online</span></td><td>0.606</td><td><span class="bar" style="--v:.86"></span><span>86%</span></td><td>19</td></tr>
+                <tr><td><span lang="zh-CN">离线训练的网络</span><span lang="en">Network trained offline</span></td><td>0.633</td><td><span class="bar" style="--v:.75"></span><span>75%</span></td><td>16</td></tr>
+                <tr><td><span lang="zh-CN">在线网络再迭代 5 次</span><span lang="en">Online network, then 5 iterations</span></td><td>0.580</td><td><span class="bar" style="--v:.98"></span><span>98%</span></td><td>407</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
       <footer class="end">
         <p lang="zh-CN">实习和合作请写信到 <a href="mailto:tanghy@idsse.ac.cn">tanghy@idsse.ac.cn</a>。</p>
         <p lang="en">For internships or collaboration, write to <a href="mailto:tanghy@idsse.ac.cn">tanghy@idsse.ac.cn</a>.</p>

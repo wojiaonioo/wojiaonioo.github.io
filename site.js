@@ -21,23 +21,42 @@
   });
   setLang(root.dataset.lang, false);
 
-  // Section index: mark the section that currently occupies the upper part of the viewport.
-  var links = {};
-  document.querySelectorAll(".depth-index a").forEach(function (a) { links[a.hash.slice(1)] = a.parentElement; });
-  var sections = Array.prototype.filter.call(document.querySelectorAll("main section"), function (s) { return links[s.id]; });
-  function markActive() {
-    var current = sections[0];
-    sections.forEach(function (s) { if (s.getBoundingClientRect().top < window.innerHeight * 0.35) current = s; });
-    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 2) current = sections[sections.length - 1];
-    sections.forEach(function (s) { links[s.id].classList.toggle("is-active", s === current); });
-  }
-  var ticking = false;
-  window.addEventListener("scroll", function () {
-    if (!ticking) { ticking = true; requestAnimationFrame(function () { ticking = false; markActive(); }); }
-  }, { passive: true });
-  window.addEventListener("resize", markActive);
-  markActive();
-  requestAnimationFrame(function () { root.classList.add("ready"); });
+  // Section tabs: arrow keys move between tabs, and the selected section is recorded in the URL hash, so
+  // a reload or a shared link (#performance) opens the same one.
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  var selectTab = function (tab, focus) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute("aria-selected", String(on));
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute("aria-controls")).classList.toggle("is-active", on);
+    });
+    if (focus) tab.focus();
+  };
+  var tabFor = function (id) {
+    return tabs.find(function (t) { return t.getAttribute("aria-controls") === id; });
+  };
+  tabs.forEach(function (t, i) {
+    t.addEventListener("click", function () {
+      selectTab(t);
+      var url = new URL(location.href);
+      url.hash = t.getAttribute("aria-controls");
+      history.replaceState(null, "", url);
+    });
+    t.addEventListener("keydown", function (e) {
+      var j = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+      if (j === undefined) return;
+      e.preventDefault();
+      tabs[(j + tabs.length) % tabs.length].click();
+      tabs[(j + tabs.length) % tabs.length].focus();
+    });
+  });
+  var fromHash = function () {
+    var t = tabFor(location.hash.slice(1));
+    if (t) selectTab(t);
+  };
+  window.addEventListener("hashchange", fromHash);
+  fromHash();
 
   // Figure viewer: a native modal dialog that shows the figure in the active language at a larger size.
   var viewer = document.querySelector(".viewer");
@@ -52,7 +71,8 @@
       var fig = btn.closest("figure");
       trigger = btn;
       var img = Array.prototype.find.call(fig.querySelectorAll("img"), function (i) { return i.offsetParent !== null; });
-      var cap = Array.prototype.find.call(fig.querySelectorAll("figcaption > span"), function (s) { return s.offsetParent !== null; });
+      // The viewer shows the full caption; the page shows the short one.
+      var cap = fig.querySelector('.cap-full[lang="' + root.lang + '"]');
       vimg.src = img.src;
       vimg.alt = img.alt;
       viewer.style.setProperty("--zoom", (fig.dataset.zoom || 1200) + "px");
@@ -83,8 +103,7 @@
   viewer.addEventListener("close", function () { if (trigger) trigger.focus({ preventScroll: true }); });
 
 
-  // Figure 1 is a looping video (one second per model day). The slider over its difference curve
-  // scrubs model time; with reduced motion the video waits on its poster until played. The left-panel
+  // Figure 1 is a looping video (one second per model day). The slider under it scrubs model time; with reduced motion the video waits on its poster until played. The left-panel
   // switch swaps in a second video, rendered frame for frame alongside the first, at the same model time.
   var flowFrame = document.querySelector(".flow-frame");
   if (flowFrame) {
@@ -186,7 +205,7 @@
     label();
   }
 
-  // Narrow screens: the rail is a top bar whose menu opens the introduction, contacts and section index.
+  // Narrow screens: the masthead is a top bar whose menu opens the education, interests and contacts.
   var rail = document.querySelector(".rail"), menu = document.querySelector(".rail-menu");
   var setMenu = function (open) {
     rail.classList.toggle("is-open", open);
