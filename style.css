@@ -119,8 +119,8 @@ html[data-lang="zh"] .hero-sub { letter-spacing: .04em; }
 
 p { margin: 0 0 14px; }
 /* Avoid a lone character or word on the last line where the browser can. */
-p, li, figcaption, .tab-s { text-wrap: pretty; }
-.lede { text-wrap: balance; }
+p, li, figcaption { text-wrap: pretty; }
+.lede, .tab-s { text-wrap: balance; }
 sup { line-height: 0; }
 
 .plate { margin: 0; padding: 20px; background: var(--plate); border-radius: 18px; box-shadow: var(--shadow); }
