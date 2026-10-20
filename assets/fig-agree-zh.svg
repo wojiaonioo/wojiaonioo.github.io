@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="400" role="img" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>TorchOcean 与 MITgcm 前 3 天温度的均方根差，与 MITgcm 换分块的差同量级</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 400 
+L 600 400 
+L 600 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 92 330 
+L 584 330 
+L 584 14 
+L 92 14 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m6c93a64df0" d="M 0 0 
+L 0 6.3 
+" style="stroke: #000000; stroke-width: 1.125"/>
+      </defs>
+      <g>
+       <use xlink:href="#m6c93a64df0" x="99.935484" y="330" style="stroke: #000000; stroke-width: 1.125"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="99.935484" y="354.125625" transform="rotate(-0 99.935484 354.125625)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m6c93a64df0" x="179.290323" y="330" style="stroke: #000000; stroke-width: 1.125"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="179.290323" y="354.125625" transform="rotate(-0 179.290323 354.125625)">0.5</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m6c93a64df0" x="258.645161" y="330" style="stroke: #000000; stroke-width: 1.125"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="258.645161" y="354.125625" transform="rotate(-0 258.645161 354.125625)">1</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m6c93a64df0" x="338" y="330" style="stroke: #000000; stroke-width: 1.125"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="338" y="354.125625" transform="rotate(-0 338 354.125625)">1.5</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m6c93a64df0" x="417.354839" y="330" style="stroke: #000000; stroke-width: 1.125"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="417.354839" y="354.125625" transform="rotate(-0 417.354839 354.125625)">2</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m6c93a64df0" x="496.709677" y="330" style="stroke: #000000; stroke-width: 1.125"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="496.709677" y="354.125625" transform="rotate(-0 496.709677 354.125625)">2.5</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m6c93a64df0" x="576.064516" y="330" style="stroke: #000000; stroke-width: 1.125"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="576.064516" y="354.125625" transform="rotate(-0 576.064516 354.125625)">3</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="338" y="377.8125" transform="rotate(-0 338 377.8125)">时间（天）</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_8">
+      <defs>
+       <path id="m68d7708e53" d="M 0 0 
+L -6.3 0 
+" style="stroke: #000000; stroke-width: 1.125"/>
+      </defs>
+      <g>
+       <use xlink:href="#m68d7708e53" x="92" y="330" style="stroke: #000000; stroke-width: 1.125"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end" x="81.2" y="336.662812" transform="rotate(-0 81.2 336.662812)">10⁻¹²</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m68d7708e53" x="92" y="259.777778" style="stroke: #000000; stroke-width: 1.125"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end" x="81.2" y="266.44059" transform="rotate(-0 81.2 266.44059)">10⁻¹⁰</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m68d7708e53" x="92" y="189.555556" style="stroke: #000000; stroke-width: 1.125"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end" x="81.2" y="196.218368" transform="rotate(-0 81.2 196.218368)">10⁻⁸</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m68d7708e53" x="92" y="119.333333" style="stroke: #000000; stroke-width: 1.125"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end" x="81.2" y="125.996146" transform="rotate(-0 81.2 125.996146)">10⁻⁶</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m68d7708e53" x="92" y="49.111111" style="stroke: #000000; stroke-width: 1.125"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end" x="81.2" y="55.773924" transform="rotate(-0 81.2 55.773924)">10⁻⁴</text>
+     </g>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="32.524062" y="172" transform="rotate(-90 32.524062 172)">均方根差（K）</text>
+    </g>
+   </g>
+   <g id="line2d_13">
+    <path d="M 139.612903 213.995731 
+L 179.290323 243.281493 
+L 218.967742 247.86658 
+L 258.645161 94.767931 
+L 298.322581 63.63506 
+L 338 39.62154 
+L 377.677419 38.375169 
+L 417.354839 41.900992 
+L 457.032258 46.450026 
+L 496.709677 54.101467 
+L 536.387097 58.537376 
+L 576.064516 64.90538 
+" clip-path="url(#p6236752b29)" style="fill: none; stroke: #0072b2; stroke-width: 2.475; stroke-linecap: square"/>
+    <defs>
+     <path id="mf6caeb03aa" d="M 0 3.375 
+C 0.89506 3.375 1.753582 3.019389 2.386485 2.386485 
+C 3.019389 1.753582 3.375 0.89506 3.375 0 
+C 3.375 -0.89506 3.019389 -1.753582 2.386485 -2.386485 
+C 1.753582 -3.019389 0.89506 -3.375 0 -3.375 
+C -0.89506 -3.375 -1.753582 -3.019389 -2.386485 -2.386485 
+C -3.019389 -1.753582 -3.375 -0.89506 -3.375 0 
+C -3.375 0.89506 -3.019389 1.753582 -2.386485 2.386485 
+C -1.753582 3.019389 -0.89506 3.375 0 3.375 
+z
+" style="stroke: #0072b2"/>
+    </defs>
+    <g clip-path="url(#p6236752b29)">
+     <use xlink:href="#mf6caeb03aa" x="139.612903" y="213.995731" style="fill: #0072b2; stroke: #0072b2"/>
+     <use xlink:href="#mf6caeb03aa" x="179.290323" y="243.281493" style="fill: #0072b2; stroke: #0072b2"/>
+     <use xlink:href="#mf6caeb03aa" x="218.967742" y="247.86658" style="fill: #0072b2; stroke: #0072b2"/>
+     <use xlink:href="#mf6caeb03aa" x="258.645161" y="94.767931" style="fill: #0072b2; stroke: #0072b2"/>
+     <use xlink:href="#mf6caeb03aa" x="298.322581" y="63.63506" style="fill: #0072b2; stroke: #0072b2"/>
+     <use xlink:href="#mf6caeb03aa" x="338" y="39.62154" style="fill: #0072b2; stroke: #0072b2"/>
+     <use xlink:href="#mf6caeb03aa" x="377.677419" y="38.375169" style="fill: #0072b2; stroke: #0072b2"/>
+     <use xlink:href="#mf6caeb03aa" x="417.354839" y="41.900992" style="fill: #0072b2; stroke: #0072b2"/>
+     <use xlink:href="#mf6caeb03aa" x="457.032258" y="46.450026" style="fill: #0072b2; stroke: #0072b2"/>
+     <use xlink:href="#mf6caeb03aa" x="496.709677" y="54.101467" style="fill: #0072b2; stroke: #0072b2"/>
+     <use xlink:href="#mf6caeb03aa" x="536.387097" y="58.537376" style="fill: #0072b2; stroke: #0072b2"/>
+     <use xlink:href="#mf6caeb03aa" x="576.064516" y="64.90538" style="fill: #0072b2; stroke: #0072b2"/>
+    </g>
+   </g>
+   <g id="line2d_14">
+    <path d="M 139.612903 304.074777 
+L 179.290323 261.084548 
+L 218.967742 216.51206 
+L 258.645161 100.100803 
+L 298.322581 65.341426 
+L 338 39.657751 
+L 377.677419 37.989219 
+L 417.354839 41.853108 
+L 457.032258 47.488731 
+L 496.709677 54.923435 
+L 536.387097 60.585669 
+L 576.064516 67.058491 
+" clip-path="url(#p6236752b29)" style="fill: none; stroke-dasharray: 9.9,3.7125; stroke-dashoffset: 0; stroke: #d55e00; stroke-width: 2.475"/>
+    <defs>
+     <path id="m7539c0553f" d="M -3.375 3.375 
+L 3.375 3.375 
+L 3.375 -3.375 
+L -3.375 -3.375 
+z
+" style="stroke: #d55e00; stroke-width: 1.8; stroke-linejoin: miter"/>
+    </defs>
+    <g clip-path="url(#p6236752b29)">
+     <use xlink:href="#m7539c0553f" x="139.612903" y="304.074777" style="fill-opacity: 0; stroke: #d55e00; stroke-width: 1.8; stroke-linejoin: miter"/>
+     <use xlink:href="#m7539c0553f" x="179.290323" y="261.084548" style="fill-opacity: 0; stroke: #d55e00; stroke-width: 1.8; stroke-linejoin: miter"/>
+     <use xlink:href="#m7539c0553f" x="218.967742" y="216.51206" style="fill-opacity: 0; stroke: #d55e00; stroke-width: 1.8; stroke-linejoin: miter"/>
+     <use xlink:href="#m7539c0553f" x="258.645161" y="100.100803" style="fill-opacity: 0; stroke: #d55e00; stroke-width: 1.8; stroke-linejoin: miter"/>
+     <use xlink:href="#m7539c0553f" x="298.322581" y="65.341426" style="fill-opacity: 0; stroke: #d55e00; stroke-width: 1.8; stroke-linejoin: miter"/>
+     <use xlink:href="#m7539c0553f" x="338" y="39.657751" style="fill-opacity: 0; stroke: #d55e00; stroke-width: 1.8; stroke-linejoin: miter"/>
+     <use xlink:href="#m7539c0553f" x="377.677419" y="37.989219" style="fill-opacity: 0; stroke: #d55e00; stroke-width: 1.8; stroke-linejoin: miter"/>
+     <use xlink:href="#m7539c0553f" x="417.354839" y="41.853108" style="fill-opacity: 0; stroke: #d55e00; stroke-width: 1.8; stroke-linejoin: miter"/>
+     <use xlink:href="#m7539c0553f" x="457.032258" y="47.488731" style="fill-opacity: 0; stroke: #d55e00; stroke-width: 1.8; stroke-linejoin: miter"/>
+     <use xlink:href="#m7539c0553f" x="496.709677" y="54.923435" style="fill-opacity: 0; stroke: #d55e00; stroke-width: 1.8; stroke-linejoin: miter"/>
+     <use xlink:href="#m7539c0553f" x="536.387097" y="60.585669" style="fill-opacity: 0; stroke: #d55e00; stroke-width: 1.8; stroke-linejoin: miter"/>
+     <use xlink:href="#m7539c0553f" x="576.064516" y="67.058491" style="fill-opacity: 0; stroke: #d55e00; stroke-width: 1.8; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 92 330 
+L 92 14 
+" style="fill: none; stroke: #000000; stroke-width: 1.35; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 92 330 
+L 584 330 
+" style="fill: none; stroke: #000000; stroke-width: 1.35; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 429.148079 140.651388 
+Q 405.435103 93.531853 382.513715 47.985266 
+" style="fill: none; stroke: #262626; stroke-width: 1.575; stroke-linecap: round"/>
+    <path d="M 382.526785 53.016402 
+L 382.513715 47.985266 
+L 386.546466 50.993491 
+z
+" style="fill: #262626; stroke: #262626; stroke-width: 1.575; stroke-linecap: round"/>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; fill: #262626" transform="translate(379.03879 159.102046)">峰值 2.0×10⁻⁴ K</text>
+    <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; fill: #262626" transform="translate(401.724415 179.232796)">第 1.75 天</text>
+   </g>
+   <g id="legend_1">
+    <g id="line2d_15">
+     <path d="M 309.665938 286.673437 
+L 333.065938 286.673437 
+L 356.465938 286.673437 
+" style="fill: none; stroke: #0072b2; stroke-width: 2.475; stroke-linecap: square"/>
+     <g>
+      <use xlink:href="#mf6caeb03aa" x="333.065938" y="286.673437" style="fill: #0072b2; stroke: #0072b2"/>
+     </g>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: start" x="370.865938" y="292.973437" transform="rotate(-0 370.865938 292.973437)">TorchOcean − MITgcm</text>
+    </g>
+    <g id="line2d_16">
+     <path d="M 309.665938 310.464375 
+L 333.065938 310.464375 
+L 356.465938 310.464375 
+" style="fill: none; stroke-dasharray: 9.9,3.7125; stroke-dashoffset: 0; stroke: #d55e00; stroke-width: 2.475"/>
+     <g>
+      <use xlink:href="#m7539c0553f" x="333.065938" y="310.464375" style="fill-opacity: 0; stroke: #d55e00; stroke-width: 1.8; stroke-linejoin: miter"/>
+     </g>
+    </g>
+    <g id="text_17">
+     <text style="font-size: 18px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: start" x="370.865938" y="316.764375" transform="rotate(-0 370.865938 316.764375)">MITgcm 5×8 − 10×8 分块</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p6236752b29">
+   <rect x="92" y="14" width="492" height="316"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="560" height="1075" role="img" viewBox="0 0 560 1075" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>TorchOcean time per step against grid size, and the MITgcm core ladder at N = 960</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 1075 
+L 560 1075 
+L 560 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 88 460 
+L 510 460 
+L 510 40 
+L 88 40 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m764d6bff43" d="M 0 0 
+L 0 7 
+" style="stroke: #000000; stroke-width: 1.25"/>
+      </defs>
+      <g>
+       <use xlink:href="#m764d6bff43" x="130.502952" y="460" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="130.502952" y="486.80625" transform="rotate(-0 130.502952 486.80625)">160</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m764d6bff43" x="200.313609" y="460" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="200.313609" y="486.80625" transform="rotate(-0 200.313609 486.80625)">240</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m764d6bff43" x="249.845058" y="460" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="249.845058" y="486.80625" transform="rotate(-0 249.845058 486.80625)">320</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m764d6bff43" x="319.655715" y="460" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="319.655715" y="486.80625" transform="rotate(-0 319.655715 486.80625)">480</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m764d6bff43" x="369.187164" y="460" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="369.187164" y="486.80625" transform="rotate(-0 369.187164 486.80625)">640</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m764d6bff43" x="438.997821" y="460" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="438.997821" y="486.80625" transform="rotate(-0 438.997821 486.80625)">960</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m764d6bff43" x="493.827358" y="460" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="493.827358" y="486.80625" transform="rotate(-0 493.827358 486.80625)">1320</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8">
+      <defs>
+       <path id="meda581deec" d="M 0 0 
+L 0 4 
+" style="stroke: #000000"/>
+      </defs>
+      <g>
+       <use xlink:href="#meda581deec" x="407.606741" y="460" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#meda581deec" x="465.538601" y="460" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#meda581deec" x="488.52927" y="460" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="299" y="512.4625" transform="rotate(-0 299 512.4625)">Grid size N (N × N × 90 cells)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11">
+      <defs>
+       <path id="mbf8daf7749" d="M 0 0 
+L -7 0 
+" style="stroke: #000000; stroke-width: 1.25"/>
+      </defs>
+      <g>
+       <use xlink:href="#mbf8daf7749" x="88" y="443.68551" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end" x="76" y="451.088635" transform="rotate(-0 76 451.088635)">10</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#mbf8daf7749" x="88" y="363.363677" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end" x="76" y="370.766802" transform="rotate(-0 76 370.766802)">30</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#mbf8daf7749" x="88" y="275.338717" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end" x="76" y="282.741842" transform="rotate(-0 76 282.741842)">100</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#mbf8daf7749" x="88" y="195.016884" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end" x="76" y="202.420009" transform="rotate(-0 76 202.420009)">300</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#mbf8daf7749" x="88" y="106.991924" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end" x="76" y="114.395049" transform="rotate(-0 76 114.395049)">1000</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16">
+      <defs>
+       <path id="ma87d3c1d32" d="M 0 0 
+L -4 0 
+" style="stroke: #000000"/>
+      </defs>
+      <g>
+       <use xlink:href="#ma87d3c1d32" x="88" y="393.008076" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#ma87d3c1d32" x="88" y="326.016152" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#ma87d3c1d32" x="88" y="224.661283" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#ma87d3c1d32" x="88" y="157.669359" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#ma87d3c1d32" x="88" y="56.31449" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="22.025" y="250" transform="rotate(-90 22.025 250)">Time per step (ms)</text>
+    </g>
+   </g>
+   <g id="line2d_21">
+    <path d="M 130.502952 437.362867 
+L 200.313609 405.76664 
+L 249.845058 376.272635 
+L 319.655715 336.505852 
+L 369.187164 305.112172 
+L 407.606741 279.704662 
+L 438.997821 258.551735 
+L 465.538601 222.277901 
+L 488.52927 219.818464 
+L 493.827358 218.464095 
+" clip-path="url(#pab0fca6041)" style="fill: none; stroke: #8c8c8c; stroke-width: 2.25; stroke-linecap: square"/>
+    <defs>
+     <path id="m243eda3b00" d="M 0 3.75 
+C 0.994512 3.75 1.948425 3.354876 2.65165 2.65165 
+C 3.354876 1.948425 3.75 0.994512 3.75 0 
+C 3.75 -0.994512 3.354876 -1.948425 2.65165 -2.65165 
+C 1.948425 -3.354876 0.994512 -3.75 0 -3.75 
+C -0.994512 -3.75 -1.948425 -3.354876 -2.65165 -2.65165 
+C -3.354876 -1.948425 -3.75 -0.994512 -3.75 0 
+C -3.75 0.994512 -3.354876 1.948425 -2.65165 2.65165 
+C -1.948425 3.354876 -0.994512 3.75 0 3.75 
+z
+" style="stroke: #8c8c8c"/>
+    </defs>
+    <g clip-path="url(#pab0fca6041)">
+     <use xlink:href="#m243eda3b00" x="130.502952" y="437.362867" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+     <use xlink:href="#m243eda3b00" x="200.313609" y="405.76664" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+     <use xlink:href="#m243eda3b00" x="249.845058" y="376.272635" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+     <use xlink:href="#m243eda3b00" x="319.655715" y="336.505852" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+     <use xlink:href="#m243eda3b00" x="369.187164" y="305.112172" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+     <use xlink:href="#m243eda3b00" x="407.606741" y="279.704662" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+     <use xlink:href="#m243eda3b00" x="438.997821" y="258.551735" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+     <use xlink:href="#m243eda3b00" x="465.538601" y="222.277901" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+     <use xlink:href="#m243eda3b00" x="488.52927" y="219.818464" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+     <use xlink:href="#m243eda3b00" x="493.827358" y="218.464095" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+    </g>
+   </g>
+   <g id="line2d_22">
+    <defs>
+     <path id="m0f2c690636" d="M -5 5 
+L 5 5 
+L 5 -5 
+L -5 -5 
+z
+" style="stroke: #8c8c8c; stroke-linejoin: miter"/>
+    </defs>
+    <g clip-path="url(#pab0fca6041)">
+     <use xlink:href="#m0f2c690636" x="438.997821" y="81.281682" style="fill: #8c8c8c; stroke: #8c8c8c; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 88 460 
+L 88 40 
+" style="fill: none; stroke: #000000; stroke-width: 1.5; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 88 460 
+L 510 460 
+" style="fill: none; stroke: #000000; stroke-width: 1.5; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_23">
+    <path d="M 130.502952 407.863285 
+L 200.313609 382.065675 
+L 249.845058 360.620453 
+L 319.655715 305.323241 
+L 369.187164 265.075321 
+L 407.606741 233.226593 
+L 438.997821 206.337276 
+" clip-path="url(#pab0fca6041)" style="fill: none; stroke-dasharray: 13,5.2; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 3.25"/>
+    <defs>
+     <path id="mee92b78bbb" d="M 0 5.25 
+C 1.392316 5.25 2.727794 4.696827 3.712311 3.712311 
+C 4.696827 2.727794 5.25 1.392316 5.25 0 
+C 5.25 -1.392316 4.696827 -2.727794 3.712311 -3.712311 
+C 2.727794 -4.696827 1.392316 -5.25 0 -5.25 
+C -1.392316 -5.25 -2.727794 -4.696827 -3.712311 -3.712311 
+C -4.696827 -2.727794 -5.25 -1.392316 -5.25 0 
+C -5.25 1.392316 -4.696827 2.727794 -3.712311 3.712311 
+C -2.727794 4.696827 -1.392316 5.25 0 5.25 
+z
+" style="stroke: #0072b2; stroke-width: 2.5"/>
+    </defs>
+    <g clip-path="url(#pab0fca6041)">
+     <use xlink:href="#mee92b78bbb" x="130.502952" y="407.863285" style="fill: #ffffff; stroke: #0072b2; stroke-width: 2.5"/>
+     <use xlink:href="#mee92b78bbb" x="200.313609" y="382.065675" style="fill: #ffffff; stroke: #0072b2; stroke-width: 2.5"/>
+     <use xlink:href="#mee92b78bbb" x="249.845058" y="360.620453" style="fill: #ffffff; stroke: #0072b2; stroke-width: 2.5"/>
+     <use xlink:href="#mee92b78bbb" x="319.655715" y="305.323241" style="fill: #ffffff; stroke: #0072b2; stroke-width: 2.5"/>
+     <use xlink:href="#mee92b78bbb" x="369.187164" y="265.075321" style="fill: #ffffff; stroke: #0072b2; stroke-width: 2.5"/>
+     <use xlink:href="#mee92b78bbb" x="407.606741" y="233.226593" style="fill: #ffffff; stroke: #0072b2; stroke-width: 2.5"/>
+     <use xlink:href="#mee92b78bbb" x="438.997821" y="206.337276" style="fill: #ffffff; stroke: #0072b2; stroke-width: 2.5"/>
+    </g>
+   </g>
+   <g id="line2d_24">
+    <path d="M 130.502952 359.707974 
+L 200.313609 356.139583 
+L 249.845058 353.158209 
+L 319.655715 335.487056 
+L 369.187164 304.292 
+L 407.606741 273.861094 
+L 438.997821 249.451916 
+L 465.538601 227.526058 
+L 488.52927 209.168072 
+L 493.827358 203.793564 
+" clip-path="url(#pab0fca6041)" style="fill: none; stroke: #0072b2; stroke-width: 3.25; stroke-linecap: square"/>
+    <defs>
+     <path id="m20f70abcad" d="M 0 5.25 
+C 1.392316 5.25 2.727794 4.696827 3.712311 3.712311 
+C 4.696827 2.727794 5.25 1.392316 5.25 0 
+C 5.25 -1.392316 4.696827 -2.727794 3.712311 -3.712311 
+C 2.727794 -4.696827 1.392316 -5.25 0 -5.25 
+C -1.392316 -5.25 -2.727794 -4.696827 -3.712311 -3.712311 
+C -4.696827 -2.727794 -5.25 -1.392316 -5.25 0 
+C -5.25 1.392316 -4.696827 2.727794 -3.712311 3.712311 
+C -2.727794 4.696827 -1.392316 5.25 0 5.25 
+z
+" style="stroke: #0072b2; stroke-width: 2.5"/>
+    </defs>
+    <g clip-path="url(#pab0fca6041)">
+     <use xlink:href="#m20f70abcad" x="130.502952" y="359.707974" style="fill: #0072b2; stroke: #0072b2; stroke-width: 2.5"/>
+     <use xlink:href="#m20f70abcad" x="200.313609" y="356.139583" style="fill: #0072b2; stroke: #0072b2; stroke-width: 2.5"/>
+     <use xlink:href="#m20f70abcad" x="249.845058" y="353.158209" style="fill: #0072b2; stroke: #0072b2; stroke-width: 2.5"/>
+     <use xlink:href="#m20f70abcad" x="319.655715" y="335.487056" style="fill: #0072b2; stroke: #0072b2; stroke-width: 2.5"/>
+     <use xlink:href="#m20f70abcad" x="369.187164" y="304.292" style="fill: #0072b2; stroke: #0072b2; stroke-width: 2.5"/>
+     <use xlink:href="#m20f70abcad" x="407.606741" y="273.861094" style="fill: #0072b2; stroke: #0072b2; stroke-width: 2.5"/>
+     <use xlink:href="#m20f70abcad" x="438.997821" y="249.451916" style="fill: #0072b2; stroke: #0072b2; stroke-width: 2.5"/>
+     <use xlink:href="#m20f70abcad" x="465.538601" y="227.526058" style="fill: #0072b2; stroke: #0072b2; stroke-width: 2.5"/>
+     <use xlink:href="#m20f70abcad" x="488.52927" y="209.168072" style="fill: #0072b2; stroke: #0072b2; stroke-width: 2.5"/>
+     <use xlink:href="#m20f70abcad" x="493.827358" y="203.793564" style="fill: #0072b2; stroke: #0072b2; stroke-width: 2.5"/>
+    </g>
+   </g>
+   <g id="line2d_25">
+    <path d="M 130.502952 336.49792 
+L 200.313609 330.314841 
+L 249.845058 318.945042 
+L 319.655715 281.571558 
+L 369.187164 238.093194 
+L 407.606741 202.905436 
+L 438.997821 169.984685 
+L 465.538601 140.139851 
+L 488.52927 116.362851 
+L 493.827358 109.476687 
+" clip-path="url(#pab0fca6041)" style="fill: none; stroke: #009e73; stroke-width: 3.25; stroke-linecap: square"/>
+    <defs>
+     <path id="mdc2aa244ed" d="M -5.25 5.25 
+L 5.25 5.25 
+L 5.25 -5.25 
+L -5.25 -5.25 
+z
+" style="stroke: #009e73; stroke-width: 2.5; stroke-linejoin: miter"/>
+    </defs>
+    <g clip-path="url(#pab0fca6041)">
+     <use xlink:href="#mdc2aa244ed" x="130.502952" y="336.49792" style="fill: #009e73; stroke: #009e73; stroke-width: 2.5; stroke-linejoin: miter"/>
+     <use xlink:href="#mdc2aa244ed" x="200.313609" y="330.314841" style="fill: #009e73; stroke: #009e73; stroke-width: 2.5; stroke-linejoin: miter"/>
+     <use xlink:href="#mdc2aa244ed" x="249.845058" y="318.945042" style="fill: #009e73; stroke: #009e73; stroke-width: 2.5; stroke-linejoin: miter"/>
+     <use xlink:href="#mdc2aa244ed" x="319.655715" y="281.571558" style="fill: #009e73; stroke: #009e73; stroke-width: 2.5; stroke-linejoin: miter"/>
+     <use xlink:href="#mdc2aa244ed" x="369.187164" y="238.093194" style="fill: #009e73; stroke: #009e73; stroke-width: 2.5; stroke-linejoin: miter"/>
+     <use xlink:href="#mdc2aa244ed" x="407.606741" y="202.905436" style="fill: #009e73; stroke: #009e73; stroke-width: 2.5; stroke-linejoin: miter"/>
+     <use xlink:href="#mdc2aa244ed" x="438.997821" y="169.984685" style="fill: #009e73; stroke: #009e73; stroke-width: 2.5; stroke-linejoin: miter"/>
+     <use xlink:href="#mdc2aa244ed" x="465.538601" y="140.139851" style="fill: #009e73; stroke: #009e73; stroke-width: 2.5; stroke-linejoin: miter"/>
+     <use xlink:href="#mdc2aa244ed" x="488.52927" y="116.362851" style="fill: #009e73; stroke: #009e73; stroke-width: 2.5; stroke-linejoin: miter"/>
+     <use xlink:href="#mdc2aa244ed" x="493.827358" y="109.476687" style="fill: #009e73; stroke: #009e73; stroke-width: 2.5; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end; fill: #262626" x="115.502952" y="364.811099" transform="rotate(-0 115.502952 364.811099)">32</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: start; fill: #262626" x="508.827358" y="211.396689" transform="rotate(-0 508.827358 211.396689)">266</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end; fill: #262626" x="115.502952" y="412.96641" transform="rotate(-0 115.502952 412.96641)">16</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: start; fill: #262626" x="445.247821" y="201.440401" transform="rotate(-0 445.247821 201.440401)">257</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end; fill: #262626" x="115.502952" y="341.601045" transform="rotate(-0 115.502952 341.601045)">43</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: start; fill: #262626" x="508.827358" y="117.079812" transform="rotate(-0 508.827358 117.079812)">967</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end; fill: #262626" x="431.497821" y="157.884685" transform="rotate(-0 431.497821 157.884685)">422</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end; fill: #262626" x="423.997821" y="86.384807" transform="rotate(-0 423.997821 86.384807)">1421</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: start" x="88" y="25.4" transform="rotate(-0 88 25.4)">(a)</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 88 995 
+L 510 995 
+L 510 745 
+L 88 745 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_11">
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m764d6bff43" x="115.821539" y="995" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="115.821539" y="1021.80625" transform="rotate(-0 115.821539 1021.80625)">100</text>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#m764d6bff43" x="234.48108" y="995" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="234.48108" y="1021.80625" transform="rotate(-0 234.48108 1021.80625)">200</text>
+     </g>
+    </g>
+    <g id="xtick_13">
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m764d6bff43" x="353.14062" y="995" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_26">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="353.14062" y="1021.80625" transform="rotate(-0 353.14062 1021.80625)">400</text>
+     </g>
+    </g>
+    <g id="xtick_14">
+     <g id="line2d_29">
+      <g>
+       <use xlink:href="#m764d6bff43" x="471.80016" y="995" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_27">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="471.80016" y="1021.80625" transform="rotate(-0 471.80016 1021.80625)">800</text>
+     </g>
+    </g>
+    <g id="xtick_15">
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#meda581deec" x="303.892461" y="995" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_16">
+     <g id="line2d_31">
+      <g>
+       <use xlink:href="#meda581deec" x="391.34046" y="995" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_17">
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#meda581deec" x="422.552001" y="995" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_18">
+     <g id="line2d_33">
+      <g>
+       <use xlink:href="#meda581deec" x="448.940984" y="995" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_28">
+     <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="299" y="1047.35625" transform="rotate(-0 299 1047.35625)">MITgcm CPU cores, N = 960</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_11">
+     <g id="line2d_34">
+      <g>
+       <use xlink:href="#mbf8daf7749" x="88" y="990.458973" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_29">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end" x="76" y="997.862098" transform="rotate(-0 76 997.862098)">100</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_35">
+      <g>
+       <use xlink:href="#mbf8daf7749" x="88" y="929.09423" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_30">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end" x="76" y="936.497355" transform="rotate(-0 76 936.497355)">200</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_36">
+      <g>
+       <use xlink:href="#mbf8daf7749" x="88" y="847.974452" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_31">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end" x="76" y="855.377577" transform="rotate(-0 76 855.377577)">500</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_37">
+      <g>
+       <use xlink:href="#mbf8daf7749" x="88" y="786.609708" style="stroke: #000000; stroke-width: 1.25"/>
+      </g>
+     </g>
+     <g id="text_32">
+      <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end" x="76" y="794.012833" transform="rotate(-0 76 794.012833)">1000</text>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_38">
+      <g>
+       <use xlink:href="#ma87d3c1d32" x="88" y="893.198156" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_39">
+      <g>
+       <use xlink:href="#ma87d3c1d32" x="88" y="867.729487" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_40">
+      <g>
+       <use xlink:href="#ma87d3c1d32" x="88" y="831.833413" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_41">
+      <g>
+       <use xlink:href="#ma87d3c1d32" x="88" y="818.186359" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_42">
+      <g>
+       <use xlink:href="#ma87d3c1d32" x="88" y="806.364743" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_43">
+      <g>
+       <use xlink:href="#ma87d3c1d32" x="88" y="795.937339" style="stroke: #000000"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_33">
+     <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: middle" x="22.025" y="870" transform="rotate(-90 22.025 870)">Time per step (ms)</text>
+    </g>
+   </g>
+   <g id="line2d_44">
+    <path d="M 115.821539 775.555153 
+L 234.48108 800.631627 
+L 353.14062 914.239575 
+L 384.352162 935.719948 
+L 415.563703 947.964186 
+L 453.763543 966.017974 
+L 464.811862 970.131803 
+L 471.80016 963.200356 
+" clip-path="url(#p6126b21e25)" style="fill: none; stroke: #8c8c8c; stroke-width: 2.25; stroke-linecap: square"/>
+    <g clip-path="url(#p6126b21e25)">
+     <use xlink:href="#m243eda3b00" x="115.821539" y="775.555153" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+     <use xlink:href="#m243eda3b00" x="234.48108" y="800.631627" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+     <use xlink:href="#m243eda3b00" x="353.14062" y="914.239575" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+     <use xlink:href="#m243eda3b00" x="384.352162" y="935.719948" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+     <use xlink:href="#m243eda3b00" x="415.563703" y="947.964186" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+     <use xlink:href="#m243eda3b00" x="453.763543" y="966.017974" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+     <use xlink:href="#m243eda3b00" x="464.811862" y="970.131803" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+     <use xlink:href="#m243eda3b00" x="471.80016" y="963.200356" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+    </g>
+   </g>
+   <g id="line2d_45">
+    <path d="M 441.023301 1010.214008 
+L 441.023301 959.112933 
+" clip-path="url(#p6126b21e25)" style="fill: none; stroke-dasharray: 1.75,2.625; stroke-dashoffset: 0; stroke: #262626; stroke-width: 1.75"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 88 995 
+L 88 745 
+" style="fill: none; stroke: #000000; stroke-width: 1.5; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 88 995 
+L 510 995 
+" style="fill: none; stroke: #000000; stroke-width: 1.5; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_46">
+    <path d="M 88 906.905893 
+L 510 906.905893 
+" clip-path="url(#p6126b21e25)" style="fill: none; stroke-dasharray: 13,5.2; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 3.25"/>
+   </g>
+   <g id="line2d_47">
+    <path d="M 88 959.112933 
+L 510 959.112933 
+" clip-path="url(#p6126b21e25)" style="fill: none; stroke: #0072b2; stroke-width: 3.25; stroke-linecap: square"/>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: start; fill: #262626" x="115.821539" y="897.147311" transform="rotate(-0 115.821539 897.147311)">1 GPU, 257 ms</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: start; fill: #262626" x="115.821539" y="949.354351" transform="rotate(-0 115.821539 949.354351)">2 GPUs, 142 ms</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: end; fill: #262626" x="433.523301" y="985.858973" transform="rotate(-0 433.523301 985.858973)">668 cores</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: start; fill: #262626" x="258.406861" y="791.231089" transform="rotate(-0 258.406861 791.231089)">MITgcm</text>
+   </g>
+   <g id="text_38">
+    <text style="font-weight: 700; font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: start" x="88" y="730.4" transform="rotate(-0 88 730.4)">(b)</text>
+   </g>
+  </g>
+  <g id="legend_1">
+   <g id="line2d_48">
+    <path d="M 32 560.80625 
+L 58 560.80625 
+L 84 560.80625 
+" style="fill: none; stroke-dasharray: 13,5.2; stroke-dashoffset: 0; stroke: #0072b2; stroke-width: 3.25"/>
+    <g>
+     <use xlink:href="#mee92b78bbb" x="58" y="560.80625" style="fill: #ffffff; stroke: #0072b2; stroke-width: 2.5"/>
+    </g>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: start" x="100" y="567.80625" transform="rotate(-0 100 567.80625)">TorchOcean, hydrostatic, 1 GPU</text>
+   </g>
+   <g id="line2d_49">
+    <path d="M 32 587.31875 
+L 58 587.31875 
+L 84 587.31875 
+" style="fill: none; stroke: #0072b2; stroke-width: 3.25; stroke-linecap: square"/>
+    <g>
+     <use xlink:href="#m20f70abcad" x="58" y="587.31875" style="fill: #0072b2; stroke: #0072b2; stroke-width: 2.5"/>
+    </g>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: start" x="100" y="594.31875" transform="rotate(-0 100 594.31875)">TorchOcean, hydrostatic, 2 GPUs</text>
+   </g>
+   <g id="line2d_50">
+    <path d="M 32 613.83125 
+L 58 613.83125 
+L 84 613.83125 
+" style="fill: none; stroke: #009e73; stroke-width: 3.25; stroke-linecap: square"/>
+    <g>
+     <use xlink:href="#mdc2aa244ed" x="58" y="613.83125" style="fill: #009e73; stroke: #009e73; stroke-width: 2.5; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: start" x="100" y="620.83125" transform="rotate(-0 100 620.83125)">TorchOcean, nonhydrostatic, 2 GPUs</text>
+   </g>
+   <g id="line2d_51">
+    <path d="M 32 640.55625 
+L 58 640.55625 
+L 84 640.55625 
+" style="fill: none; stroke: #8c8c8c; stroke-width: 2.25; stroke-linecap: square"/>
+    <g>
+     <use xlink:href="#m243eda3b00" x="58" y="640.55625" style="fill: #8c8c8c; stroke: #8c8c8c"/>
+    </g>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: start" x="100" y="647.55625" transform="rotate(-0 100 647.55625)">MITgcm, hydrostatic, fastest core count</text>
+   </g>
+   <g id="line2d_52">
+    <g>
+     <use xlink:href="#m0f2c690636" x="58" y="667.06875" style="fill: #8c8c8c; stroke: #8c8c8c; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 20px; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; text-anchor: start" x="100" y="674.06875" transform="rotate(-0 100 674.06875)">MITgcm, nonhydrostatic, 400 cores</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pab0fca6041">
+   <rect x="88" y="40" width="422" height="420"/>
+  </clipPath>
+  <clipPath id="p6126b21e25">
+   <rect x="88" y="745" width="422" height="250"/>
+  </clipPath>
+ </defs>
+</svg>

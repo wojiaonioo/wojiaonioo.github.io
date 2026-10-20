@@ -184,15 +184,22 @@ figcaption b { color: var(--ink); font-weight: 650; }
               transition: opacity 150ms ease; }
 .flow-video.is-off { visibility: hidden; }
 .flow-frame[aria-busy="true"] .flow-video { opacity: .75; }
-/* Transparent slider laid over the difference curve baked into the video: x 120..856 and
-   y 542..598 of the 976 x 612 frame (sx0, sx1, sy0, sy1 in flow_video). */
-.flow-scrub { position: absolute; left: 12.3%; width: 75.4%; top: 88.56%; height: 9.15%; margin: 0;
-              appearance: none; -webkit-appearance: none; background: transparent; cursor: ew-resize; }
-.flow-scrub::-webkit-slider-runnable-track { height: 100%; background: transparent; }
-.flow-scrub::-moz-range-track { height: 100%; background: transparent; }
-.flow-scrub::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 100%; background: transparent; }
-.flow-scrub::-moz-range-thumb { width: 14px; height: 100%; border: 0; background: transparent; }
+/* Model-time slider under the video (the video frames hold the two maps only). */
+.flow-scrub { grid-area: 2 / 1; display: block; width: 100%; height: 18px; margin: 8px 0 0;
+              accent-color: var(--accent); cursor: ew-resize; }
 .flow-scrub:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+/* Small agreement chart (paper Fig. 2a) inside Figure 1. */
+.flow-agree { margin-top: 18px; max-width: 420px; }
+.flow-agree img { display: block; width: 100%; height: auto; }
+/* The assimilation composite has panel titles at its top edge; keep the enlarge hint off them. */
+#assimilation .plate-open { padding-top: 34px; }
+/* Result table of the hybrid-modeling section. */
+.results { border-collapse: collapse; width: 100%; max-width: 42em; margin: 20px 0 18px; font-size: 14.5px; line-height: 1.5; }
+.results caption { caption-side: top; text-align: left; padding: 0 0 10px; color: var(--ink-2, inherit); font-size: 14px; line-height: 1.7; }
+.results caption b { color: var(--ink); font-weight: 650; }
+.results th, .results td { padding: 7px 10px; border-bottom: 1px solid var(--hair); text-align: right; vertical-align: top; }
+.results th:first-child, .results td:first-child { text-align: left; }
+.results thead th { font-weight: 600; border-bottom: 2px solid var(--hair); }
 .flow-bar { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 24px; margin-top: 12px; }
 .flow-legend { display: grid; gap: 3px; width: 200px; }
 .flow-legend-name { font-size: 12px; font-weight: 600; color: var(--ink); line-height: 1.3; }
