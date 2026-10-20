@@ -84,8 +84,8 @@
             <p class="kicker"><span lang="zh-CN">2026 年 3 月起独立开发</span><span lang="en">Sole developer since March 2026</span></p>
             <h2 id="h-torchocean">TorchOcean<span class="hero-sub"><span lang="zh-CN">可微 GPU 海洋数值模式</span><span lang="en">A differentiable GPU ocean model</span></span></h2>
           </div>
-          <p class="lede" lang="zh-CN">用 PyTorch 实现 MITgcm 的海洋离散方案，同一个 GPU 程序计算正向积分和它的梯度。梯度用于四维变分同化，也能传到模式内部的神经网络，网络因此可以在模式里在线训练。</p>
-          <p class="lede" lang="en">The ocean discretizations of MITgcm implemented in PyTorch, so that one GPU program computes forward integrations and their gradients. The gradients drive 4D-Var data assimilation and also reach neural networks inside the model, which can therefore be trained online.</p>
+          <p class="lede" lang="zh-CN">用 PyTorch 实现 MITgcm 的海洋离散方案，同一个 GPU 程序计算正向积分和它的梯度；梯度既用于四维变分同化，也能在线训练模式内的神经网络。</p>
+          <p class="lede" lang="en">TorchOcean implements the ocean discretizations of MITgcm in PyTorch so that one GPU program computes forward integrations and their gradients, which drive 4D-Var data assimilation and can train neural networks inside the model online.</p>
         </div>
         <figure class="plate flow">
           <div class="flow-main">
@@ -139,7 +139,7 @@
         <button type="button" class="tab" role="tab" id="tab-architecture" aria-controls="architecture" aria-selected="true">
           <span class="tab-n">01</span>
           <span class="tab-t"><span lang="zh-CN">结构</span><span lang="en">Architecture</span></span>
-          <span class="tab-s"><span lang="zh-CN">三处隐式求解求导不展开迭代</span><span lang="en">Solves differentiated without unrolling</span></span>
+          <span class="tab-s"><span lang="zh-CN">三处隐式求解按转置方程求导</span><span lang="en">Solves differentiated without unrolling</span></span>
         </button>
         <button type="button" class="tab" role="tab" id="tab-performance" aria-controls="performance" aria-selected="false" tabindex="-1">
           <span class="tab-n">02</span>
@@ -164,9 +164,9 @@
           <div class="panel-text">
             <p lang="zh-CN">模式支持区域、全球经纬度和立方球网格，静力和非静力方程，以及开边界、KPP 垂向混合和潮汐强迫。代码约 12.8 万行 Python 和 1.5 万行 CUDA C++。</p>
             <p lang="en">The model runs regional, global latitude–longitude and cubed-sphere grids with hydrostatic or nonhydrostatic equations, open boundaries, KPP vertical mixing and tidal forcing. The code is about 128,000 lines of Python and 15,000 lines of CUDA C++.</p>
-            <p lang="zh-CN">一个时间步分五个阶段，三处隐式求解的反向按转置方程或隐函数定理求导，不展开迭代；控制量从初始化和强迫进入，神经网络的参数也在其中。同化窗口的梯度按段存起始状态，反向时逐段重算并回传。</p>
-            <p lang="en">A time step has five stages; the three implicit solves are differentiated through transposed solves or the implicit function theorem rather than through their iterations. Controls enter through the initialization and the forcing, and the parameters of a neural network are among them. The gradient of an assimilation window stores the first state of each segment and recomputes segment by segment in reverse.</p>
-            <p lang="zh-CN">纯 PyTorch 参照实现之上，整步编译、手写 CUDA 核和多卡区域分解可以分别开关，开与不开只差舍入误差。</p>
+            <p lang="zh-CN">一个时间步分五个阶段，三处隐式求解的反向按转置方程或隐函数定理求导，不展开迭代；控制量从初始化和强迫进入，神经网络的参数也在其中。计算同化窗口的梯度时，按段保存起始状态，反向时逐段重算并回传。</p>
+            <p lang="en">A time step has five stages; the three implicit solves are differentiated through the transposed system or the implicit function theorem rather than by unrolling their iterations. Controls enter through the initialization and the forcing, and the parameters of a neural network are among them. To compute the gradient of an assimilation window, the program stores the first state of each segment and recomputes the segments in reverse order.</p>
+            <p lang="zh-CN">纯 PyTorch 参照实现之上，整步编译、手写 CUDA kernel 和多卡区域分解可以分别开关，开与不开只差舍入误差。</p>
             <p lang="en">On top of the plain PyTorch reference, whole-step compilation, hand-written CUDA kernels and multi-GPU domain decomposition can each be switched on or off and change results only by rounding.</p>
           </div>
           <figure class="panel-fig fig-arch" data-zoom="1100">
@@ -199,7 +199,7 @@
                 <span lang="en">The time step was restructured so torch.compile breaks only at the solver; it used to split into 131 pieces and recompile every step.</span>
               </li>
               <li>
-                <span lang="zh-CN">手写 43 个 CUDA 核，合并 KPP 混合、隐式垂向平流、示踪物平流和水平黏性；KPP 边界层深度的核启动从 2786 次降到 2 次，快 80 倍以上。</span>
+                <span lang="zh-CN">手写 43 个 CUDA kernel，合并 KPP 混合、隐式垂向平流、示踪物平流和水平黏性；KPP 边界层深度的 kernel 启动从 2786 次降到 2 次，快 80 倍以上。</span>
                 <span lang="en">43 CUDA kernels fuse KPP mixing, implicit vertical advection, tracer advection and horizontal viscosity; the KPP boundary-layer depth went from 2,786 launches to 2 and runs over 80 times faster.</span>
               </li>
               <li>
@@ -230,12 +230,12 @@
         <section id="assimilation" class="panel" role="tabpanel" aria-labelledby="tab-assimilation">
           <h2><span lang="zh-CN">四维变分同化</span><span lang="en">4D-Var data assimilation</span></h2>
           <div class="panel-text">
-            <p lang="zh-CN">南海孪生试验：真值由 MITgcm 从 GLORYS 再分析起算，背景从 HYCOM 分析起算，观测从真值轨迹抽样再加噪声，有海面高度轨道、海表温度块和温盐剖面。网格 160×152×41，同化窗一天，共 52 个窗，2020 年的 4 个是测试窗；每窗用 L-BFGS 迭代 30 次。</p>
-            <p lang="en">Twin experiments in the South China Sea: the truth is an MITgcm integration started from the GLORYS reanalysis, the background one started from the HYCOM analysis, and the observations (SSH tracks, SST blocks, temperature and salinity profiles) are sampled from the truth with noise. The grid is 160×152×41 and the window one day; of the 52 windows, the 4 in 2020 are test windows. Each window runs 30 L-BFGS iterations.</p>
-            <p lang="zh-CN">窗后 3 天的预报误差 52 窗平均从 0.809 降到 0.557，降低 31%，52 个窗无一例外；4 个测试窗降 28%，海面高度均方根误差降 33%。初始时刻的分析增量与真实背景误差的相关系数中位数，海表温度 0.82、温度 0.61。</p>
-            <p lang="en">Three days after the window, Q averaged over the 52 windows falls from 0.809 to 0.557, a 31% reduction, and it falls in every window; on the test windows Q falls by 28% and the RMS SSH error by 33%. The increments correlate with the true background error with median coefficients of 0.82 for SST and 0.61 for temperature.</p>
-            <p lang="zh-CN">一次代价函数加梯度在一张 A800 上 29 秒，每窗中位 884 秒。KPP 对流混合系数对浮力跃变的敏感依赖曾让 10 天窗的梯度放大到 10<sup>28</sup>；TorchOcean 按列在新时刻联立牛顿求解温盐和对流系数，用隐函数定理求导，方向导数与差分的相对误差约 10<sup>−6</sup>。</p>
-            <p lang="en">One cost-and-gradient evaluation takes 29 s on one A800, a window a median of 884 s. The sharp dependence of the KPP convective diffusivity on the buoyancy jump once amplified the gradient of a ten-day window to 10<sup>28</sup>; TorchOcean solves temperature, salinity and the convective diffusivity of each column together with a Newton iteration and differentiates through the implicit function theorem, matching finite differences to about 10<sup>−6</sup>.</p>
+            <p lang="zh-CN">南海孪生试验：真值由 MITgcm 从 GLORYS 再分析起算，背景从 HYCOM 分析起算，观测从真值轨迹抽样再加噪声，有海面高度轨道、海表温度块和温盐剖面。网格 160×152×41，同化窗一天，共 52 个窗，2020 年的 4 个是测试窗；每窗用 L-BFGS 迭代 30 次。单张 A800 上算一次代价函数加梯度需 29 秒，每窗耗时中位数为 884 秒。</p>
+            <p lang="en">Twin experiments in the South China Sea: the truth is an MITgcm integration started from the GLORYS reanalysis, the background starts from the HYCOM analysis, and the observations (SSH tracks, SST blocks, temperature and salinity profiles) are sampled from the truth with noise. The grid is 160×152×41 and the window one day; of the 52 windows, the 4 in 2020 are test windows. Each window runs 30 L-BFGS iterations; one cost-and-gradient evaluation takes 29 s on one A800, and a window takes a median of 884 s.</p>
+            <p lang="zh-CN">窗后 3 天的预报误差 Q（温盐、流速和海面高度的归一化均方误差）在 52 个窗上平均从 0.809 降到 0.557，降低 31%，每个窗都下降；4 个测试窗降 28%，海面高度均方根误差降 33%。初始时刻分析增量与真实背景误差的相关系数中位数，海表温度为 0.82、温度为 0.61。</p>
+            <p lang="en">Three days after the window, the forecast error Q (normalized mean-square error of temperature, salinity, velocity and SSH) averaged over the 52 windows falls from 0.809 to 0.557, a 31% reduction, and it falls in every window; on the test windows Q falls by 28% and the RMS SSH error by 33%. The increments correlate with the true background error with median coefficients of 0.82 for SST and 0.61 for temperature.</p>
+            <p lang="zh-CN">KPP 对流混合系数对浮力跃变的敏感依赖曾把 10 天窗的梯度放大到 10<sup>28</sup>；TorchOcean 在新时刻按列用牛顿法联立求解温盐和对流系数，再按隐函数定理求导，方向导数与差分的相对误差约 10<sup>−6</sup>。</p>
+            <p lang="en">The sharp dependence of the KPP convective diffusivity on the buoyancy jump once amplified the gradient of a ten-day window to 10<sup>28</sup>; TorchOcean solves temperature, salinity and the convective diffusivity of each column together with a Newton iteration and differentiates through the implicit function theorem. The directional derivatives agree with finite differences to a relative error of about 10<sup>−6</sup>.</p>
           </div>
           <figure class="panel-fig" data-zoom="1200">
             <button type="button" class="plate-open">
@@ -255,12 +255,12 @@
         </section>
 
         <section id="hybrid" class="panel" role="tabpanel" aria-labelledby="tab-hybrid">
-          <h2><span lang="zh-CN">混合建模：在同化里训练模式内的网络</span><span lang="en">Hybrid modeling: training a network inside the assimilation</span></h2>
+          <h2><span lang="zh-CN">混合建模：在同化里训练神经网络</span><span lang="en">Hybrid modeling: training a network inside the assimilation</span></h2>
           <div class="panel-text">
-            <p lang="zh-CN">调整初始场的那次反向积分，同样能把梯度传到产生初始场的神经网络。网络读入一个窗的观测和背景轨迹，直接输出控制量。在线训练的损失就是该窗的 4D-Var 代价函数，梯度穿过 TorchOcean 的积分到达网络参数，不需要目标分析场；对照的离线训练让同一网络拟合各训练窗的 4D-Var 分析场，训练时不跑模式。</p>
-            <p lang="en">The reverse integration that adjusts the initial state also carries the gradient to a neural network that produces it. The network reads the observations and background trajectory of a window and outputs the controls. In online training the loss is the window's 4D-Var cost function, so the gradient passes through the TorchOcean integration to the network and no target analyses are needed; the offline comparison fits the same network to the 4D-Var analyses without integrating the model.</p>
-            <p lang="zh-CN">在 4 个测试窗上，在线训练的网络补上差距的 86%，离线的 77%，每窗耗时只有 4D-Var 的 1% 到 2%；从在线网络的分析场再迭代 5 次，补到 98%，耗时是完整 4D-Var 的 29%。在线训练就是把网络参数放进控制向量的强约束 4D-Var；同样的反向积分也能训练模式内部的网络。</p>
-            <p lang="en">On the 4 test windows the online network closes 86% of the gap and the offline one 77%, at 1% to 2% of the 4D-Var cost; five more iterations from the online analysis close 98% at 29% of the full cost. Online training is strong-constraint 4D-Var with the network parameters in the control vector, and the same reverse integration can train networks inside the model.</p>
+            <p lang="zh-CN">调整初始场的那次反向积分，同样能把梯度传到生成初始场的神经网络。网络读入一个窗的观测和背景轨迹，直接输出初始场。在线训练的损失就是该窗的 4D-Var 代价函数，梯度穿过 TorchOcean 的积分到达网络参数，不需要目标分析场；对照的离线训练让同一网络拟合各训练窗的 4D-Var 分析场，训练时不跑模式。</p>
+            <p lang="en">The reverse integration that adjusts the initial state also carries the gradient to a neural network that produces it. The network reads the observations and background trajectory of a window and outputs the initial state. In online training the loss is the window's 4D-Var cost function, so the gradient passes through the TorchOcean integration to the network and no target analyses are needed; the offline comparison fits the same network to the 4D-Var analyses without integrating the model.</p>
+            <p lang="zh-CN">在 8 个验证窗和 4 个测试窗上，在线训练的网络补上差距的 86%，离线网络补上 75%，每窗耗时只有 4D-Var 的 1% 到 2%；只看不参与训练的 4 个测试窗，两者分别为 86% 和 77%。从在线网络的分析场再迭代 5 次可补到 98%，耗时为完整 4D-Var 的 29%。在线训练是以网络参数代替初始场作为控制量的强约束 4D-Var；同样的反向积分也能训练模式内部的网络。</p>
+            <p lang="en">Over the 8 validation and 4 test windows the online network closes 86% of the gap and the offline one 75%, at 1% to 2% of the 4D-Var cost; on the 4 test windows alone, which take no part in training, the two close 86% and 77%. Five more iterations from the online analysis close 98% at 29% of the full cost. Online training is strong-constraint 4D-Var with the network parameters in place of the initial state as the controls, and the same reverse integration can train networks inside the model.</p>
           </div>
           <div class="panel-fig">
             <table class="results">
