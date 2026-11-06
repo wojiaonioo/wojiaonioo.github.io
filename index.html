@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="zh-CN" data-lang="zh"
+      data-title-zh="唐浩洋，物理海洋学硕士在读"
+      data-title-en="Haoyang Tang, physical oceanography">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>唐浩洋，物理海洋学硕士在读</title>
+  <meta name="description" content="唐浩洋，中国科学院深海科学与工程研究所物理海洋学硕士在读，开发海洋环流模式 DEFgcm：用 PyTorch 实现 MITgcm 的海洋离散方案，同一个程序计算模式积分及其梯度，用于四维变分同化和神经网络的在线训练。Haoyang Tang, developer of DEFgcm, which implements the ocean discretizations of MITgcm in PyTorch so that one program computes integrations and their gradients, for 4D-Var data assimilation and online training of neural networks.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=20261103">
+  <script>
+    (function () {
+      // ?lang= (set when a visitor switches language) wins; otherwise the browser's first language.
+      var q = new URLSearchParams(location.search).get("lang");
+      var b = ((navigator.languages && navigator.languages[0]) || navigator.language || "").toLowerCase();
+      var l = q === "zh" || q === "en" ? q : b.indexOf("zh") === 0 ? "zh" : "en";
+      var h = document.documentElement;
+      h.dataset.lang = l;
+      h.lang = l === "zh" ? "zh-CN" : "en";
+      h.classList.add("js");
+      // Dark from 18:00 to 07:00 on the visitor's clock; site.js re-checks while the page stays open.
+      var hr = new Date().getHours();
+      h.dataset.theme = hr >= 18 || hr < 7 ? "dark" : "light";
+      document.title = h.dataset["title" + (l === "zh" ? "Zh" : "En")];
+    })();
+  </script>
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main"><span lang="zh-CN">跳到正文</span><span lang="en">Skip to content</span></a>
+  <div class="layout">
+    <header class="rail">
+      <div class="rail-top">
+        <div class="identity">
+          <h1><span lang="zh-CN">唐浩洋</span><span lang="en">Haoyang Tang</span></h1>
+          <p class="alt-name"><span lang="zh-CN">Haoyang Tang</span><span lang="en">唐浩洋</span></p>
+        </div>
+        <div class="rail-actions">
+          <div class="lang-switch" role="group" aria-label="Language / 语言">
+            <button type="button" data-set-lang="zh" aria-pressed="true">中文</button>
+            <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+          </div>
+          <button type="button" class="rail-menu" aria-expanded="false" aria-controls="rail-body">
+            <span lang="zh-CN">简介</span><span lang="en">About</span>
+            <svg viewBox="0 0 12 12" aria-hidden="true"><path d="m2.5 4.5 3.5 3.5 3.5-3.5"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="rail-body" id="rail-body"><div class="rail-inner">
+      <p class="role" lang="zh-CN">中国科学院深海科学与工程研究所，物理海洋学硕士在读<br>兰州大学，大气科学本科</p>
+      <p class="role" lang="en">M.S. student in physical oceanography, Institute of Deep-sea Science and Engineering, Chinese Academy of Sciences<br>B.S. in atmospheric sciences, Lanzhou University</p>
+      <p class="focus" lang="zh-CN"><span class="focus-label">研究方向</span>可微海洋数值模式、GPU 加速、变分同化、混合建模</p>
+      <p class="focus" lang="en"><span class="focus-label">Research interests</span>Differentiable ocean models, GPU acceleration, variational data assimilation, hybrid modeling</p>
+      <ul class="contact">
+        <li>
+          <a href="mailto:tanghy@idsse.ac.cn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+            tanghy@idsse.ac.cn
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/wojiaonioo">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M12 1.5a10.5 10.5 0 0 0-3.32 20.46c.52.1.72-.23.72-.5v-1.8c-2.92.63-3.54-1.4-3.54-1.4-.48-1.22-1.17-1.54-1.17-1.54-.95-.65.08-.64.08-.64 1.05.08 1.6 1.08 1.6 1.08.94 1.6 2.46 1.14 3.06.87.1-.68.37-1.14.66-1.4-2.33-.27-4.78-1.17-4.78-5.18 0-1.15.41-2.08 1.08-2.82-.1-.27-.47-1.33.1-2.78 0 0 .88-.28 2.89 1.08a10 10 0 0 1 5.26 0c2-1.36 2.88-1.08 2.88-1.08.58 1.45.21 2.51.1 2.78.68.74 1.08 1.67 1.08 2.82 0 4.02-2.45 4.9-4.79 5.16.38.33.71.97.71 1.96v2.9c0 .28.19.61.72.5A10.5 10.5 0 0 0 12 1.5Z"/></svg>
+            GitHub
+          </a>
+        </li>
+        <li lang="zh-CN">
+          <a href="assets/tanghaoyang-cv.pdf">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6m-2.5-2.5L12 17l2.5-2.5"/></svg>
+            简历 PDF
+          </a>
+        </li>
+        <li lang="en">
+          <a href="assets/tanghaoyang-cv-en.pdf">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6m-2.5-2.5L12 17l2.5-2.5"/></svg>
+            CV (PDF)
+          </a>
+        </li>
+      </ul>
+      </div></div>
+    </header>
+    <main id="main" class="field">
+      <section id="defgcm" class="hero" aria-labelledby="h-defgcm">
+        <div class="hero-head">
+          <div>
+            <p class="kicker"><span lang="zh-CN">2026 年 3 月起独立开发</span><span lang="en">Sole developer since March 2026</span></p>
+            <h2 id="h-defgcm">DEFgcm<span class="hero-sub"><span lang="zh-CN">可微、等价、快速的海洋环流模式</span><span lang="en">A differentiable, equivalent and fast ocean model</span></span></h2>
+          </div>
+          <p class="lede" lang="zh-CN">DEFgcm 用 PyTorch 实现 MITgcm 的海洋离散方案，由同一个程序计算模式积分及其梯度。在南海，它的积分与 MITgcm 之差，和只改变求和顺序的两次 MITgcm 运行之差相当。这些梯度用于四维变分同化，也能在线训练神经网络，包括时间步内部的网络。</p>
+          <p class="lede" lang="en">DEFgcm implements the ocean discretizations of MITgcm in PyTorch so that one program computes integrations and their gradients. Over the South China Sea, its integrations differ from those of MITgcm about as much as MITgcm runs with reordered sums do. The gradients run 4D-Var data assimilation and train neural networks online, inside the time steps too.</p>
+        </div>
+        <figure class="plate flow">
+          <div class="flow-main">
+            <div class="flow-frame">
+              <video class="flow-video" data-panel="mit" src="assets/flow.mp4" poster="assets/flow-poster.webp"
+                     width="976" height="520" autoplay muted loop playsinline preload="auto"></video>
+              <video class="flow-video is-off" data-panel="diff" src="assets/flow-diff.mp4" width="976" height="520"
+                     muted loop playsinline preload="none" aria-hidden="true"></video>
+              <input type="range" class="flow-scrub" min="0" max="29" step="0.05" value="0" hidden
+                     aria-label="模拟时间（天） / Model day">
+            </div>
+            <div class="flow-bar">
+              <div class="flow-legend flow-legend-diff" aria-hidden="true">
+                <span class="flow-legend-name">|DEFgcm − MITgcm|</span>
+                <span class="flow-scale flow-scale-diff"></span>
+                <span class="flow-ticks"><span>10⁻⁹</span><span>10⁻⁶</span><span>10⁻³ m/s</span></span>
+              </div>
+              <div class="flow-legend" aria-hidden="true">
+                <span class="flow-legend-name"><span lang="zh-CN">流速</span><span lang="en">Speed</span></span>
+                <span class="flow-scale"></span>
+                <span class="flow-ticks"><span>0</span><span>0.6</span><span>1.2 m/s</span></span>
+              </div>
+              <div class="flow-controls">
+                <div class="flow-panel" role="group" aria-label="左图 / Left panel" hidden>
+                  <span class="flow-panel-name" aria-hidden="true"><span lang="zh-CN">左图</span><span lang="en">Left</span></span>
+                  <span class="seg">
+                    <button type="button" data-flow-panel="mit" aria-pressed="true">MITgcm</button>
+                    <button type="button" data-flow-panel="diff" aria-pressed="false"><span lang="zh-CN">误差</span><span lang="en">Difference</span></button>
+                  </span>
+                </div>
+                <button type="button" class="flow-toggle" hidden><span lang="zh-CN">暂停</span><span lang="en">Pause</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="flow-side">
+            <div class="flow-agree">
+              <img lang="zh-CN" src="assets/fig-agree-zh-m.svg" width="480" height="400"
+                   alt="折线图：29 天里全部湿格点上温度的均方根差，DEFgcm 与 MITgcm 之差和 MITgcm 换进程分块的两次运行之差同步起落，都在第 1.75 天达到约 2×10⁻⁴ K 的峰值。">
+              <img lang="en" src="assets/fig-agree-en-m.svg" width="480" height="400"
+                   alt="Line chart: RMS temperature difference over all wet points for 29 days; DEFgcm minus MITgcm and the difference between two MITgcm process layouts rise and fall together and both peak near 2×10⁻⁴ K on day 1.75.">
+            </div>
+            <figcaption>
+              <span lang="zh-CN"><b>图 1</b>　2019 年 7 月 15 日起 29 天的区域模拟（99°E 至 129°E、1.5°N 至 30°N，1/32°，960×912×90 个格点）的海表流场，左为 MITgcm，右为 DEFgcm；点「误差」，左图换成两个模式流速之差。上方小图是全部湿格点上温度的均方根差，每 6 小时一个值：DEFgcm 与 MITgcm 之差（蓝）和 MITgcm 换进程分块重跑的两次运行之差（橙）同步起落，后者只差全局求和的顺序；29 天合并统计，两者分别为 3.6×10⁻⁵ K 和 4.0×10⁻⁵ K。</span>
+              <span lang="en"><b>Figure 1.</b> Surface currents of a 29-day regional simulation from 15 July 2019 (99°E to 129°E, 1.5°N to 30°N, 1/32°, 960×912×90 cells), MITgcm left and DEFgcm right; <i>Difference</i> shows the speed difference between the two. The chart above is the RMS temperature difference over all wet points every 6 hours: DEFgcm minus MITgcm (blue) and two MITgcm runs with different process layouts, which differ only in the order of their global sums (orange), rise and fall together; pooled over the 29 days they are 3.6×10⁻⁵ K and 4.0×10⁻⁵ K.</span>
+            </figcaption>
+          </div>
+        </figure>
+      </section>
+
+      <div class="tabs" role="tablist" aria-label="DEFgcm">
+        <button type="button" class="tab" role="tab" id="tab-architecture" aria-controls="architecture" aria-selected="true">
+          <span class="tab-n">01</span>
+          <span class="tab-t"><span lang="zh-CN">结构</span><span lang="en">Architecture</span></span>
+          <span class="tab-s"><span lang="zh-CN">同一个程序计算积分和梯度</span><span lang="en">One program for integrations and gradients</span></span>
+        </button>
+        <button type="button" class="tab" role="tab" id="tab-performance" aria-controls="performance" aria-selected="false" tabindex="-1">
+          <span class="tab-n">02</span>
+          <span class="tab-t"><span lang="zh-CN">性能</span><span lang="en">Performance</span></span>
+          <span class="tab-s"><span lang="zh-CN">4 张 GPU 的速度是 MITgcm 768 核的 1.6 倍</span><span lang="en">Four GPUs run 1.6 times as fast as MITgcm on 768 cores</span></span>
+        </button>
+        <button type="button" class="tab" role="tab" id="tab-assimilation" aria-controls="assimilation" aria-selected="false" tabindex="-1">
+          <span class="tab-n">03</span>
+          <span class="tab-t"><span lang="zh-CN">变分同化</span><span lang="en">4D-Var</span></span>
+          <span class="tab-s"><span lang="zh-CN">窗口后第 3 天的预报误差平均降低 40%</span><span lang="en">4D-Var lowers the error 3 days after the window by 40%</span></span>
+        </button>
+        <button type="button" class="tab" role="tab" id="tab-hybrid" aria-controls="hybrid" aria-selected="false" tabindex="-1">
+          <span class="tab-n">04</span>
+          <span class="tab-t"><span lang="zh-CN">混合建模</span><span lang="en">Hybrid modeling</span></span>
+          <span class="tab-s"><span lang="zh-CN">网络只算一次梯度，得到 4D-Var 改进的 81%</span><span lang="en">A network recovers 81% of the 4D-Var gain from one gradient</span></span>
+        </button>
+      </div>
+
+      <div class="panels">
+        <section id="architecture" class="panel is-active" role="tabpanel" aria-labelledby="tab-architecture">
+          <h2><span lang="zh-CN">结构</span><span lang="en">Architecture</span></h2>
+          <div class="panel-text">
+            <p lang="zh-CN">DEFgcm 在一个 PyTorch 程序中实现 MITgcm 的离散方案，既计算模式轨迹，也计算轨迹上代价函数对控制量的梯度。模式求解静力和非静力 Boussinesq 方程，支持经纬度和立方球网格，含 KPP 垂向混合、隐式自由面和开边界。</p>
+            <p lang="en">DEFgcm implements the MITgcm discretizations in one PyTorch program that computes a model trajectory and the gradient of a cost function on it with respect to the controls. It solves the hydrostatic and nonhydrostatic Boussinesq equations on latitude–longitude or cubed-sphere grids, with KPP vertical mixing, an implicit free surface and open boundaries.</p>
+            <p lang="zh-CN">一个时间步分五个阶段，反向计算对其中三处隐式求解解转置方程组。同化窗口按段求梯度：每段存一个起始状态，超出显存预算的放主机内存，反向时逐段重算、求导并释放。</p>
+            <p lang="en">A time step has five stages, and the reverse pass differentiates its three implicit solves through the transposed systems. The gradient of a window is computed segment by segment: the first state of each segment is stored, in host memory beyond a GPU budget, and the reverse pass recomputes, differentiates and releases one segment at a time.</p>
+            <p lang="zh-CN">PyTorch 编译器把张量运算融合成 GPU kernel，垂向求解、状态方程、混合和平流用手写 CUDA kernel。水平区域分解把每个水柱留在一张 GPU 上，反向时晕区交换把导数加回所属进程。</p>
+            <p lang="en">The PyTorch compiler fuses the tensor operations into GPU kernels, and hand-written CUDA kernels implement the vertical solves, the equation of state, mixing and advection. Horizontal domain decomposition keeps each water column on one GPU, and in the reverse pass the halo exchanges add the derivatives back to the owning process.</p>
+          </div>
+          <figure class="panel-fig fig-arch" data-zoom="1100">
+            <button type="button" class="plate-open">
+              <img lang="zh-CN" src="assets/fig-arch-zh.svg" width="749" height="618" loading="lazy"
+                   alt="DEFgcm 结构图：上半是一个时间步的五个阶段、控制量和网络参数进入的位置以及反向计算，下半是同化窗口的分段检查点与反向重算。">
+              <img lang="en" src="assets/fig-arch-en.svg" width="749" height="618" loading="lazy"
+                   alt="DEFgcm architecture: the five stages of a time step with the entry points of the controls and the network parameters and the reverse pass, and the segmented checkpoints and reverse recomputation of an assimilation window.">
+              <span class="zoom-hint" aria-hidden="true"><span lang="zh-CN">放大</span><span lang="en">Enlarge</span></span>
+            </button>
+            <figcaption>
+              <span class="cap" lang="zh-CN"><b>图 2</b>　一个时间步的五个阶段与反向计算（橙色），以及同化窗口的分段检查点与反向重算。</span>
+              <span class="cap" lang="en"><b>Figure 2.</b> The five stages of a time step with the reverse pass (orange), and the segmented checkpoints and reverse recomputation of an assimilation window.</span>
+              <span class="cap-full" lang="zh-CN"><b>图 2</b>　(a) 一个时间步分五个阶段把状态推进一步：显式倾向的 Adams–Bashforth 外推、动量预测、隐式自由面、流速订正和示踪物更新；圆角白框是隐式求解。控制量 c 经初始化和第 1、5 阶段的强迫进入，紫色箭头是网络参数进入的两种方式，即设定初始场或在每一步内提供一项。反向计算（橙色）中，伴随状态经各隐式求解的反向运算从第 n+1 步传回第 n 步。(b) N 步的窗口：正向积分在观测时刻把失配累加进代价函数 J，并保存每段 s 步的起点状态，最后几段的状态在显存预算内留在 GPU 上，其余放主机内存；反向从最后一段到第一段，恢复段首状态、重算该段、把伴随状态传回段首并在观测时刻加上失配的导数，再释放该段的中间量。</span>
+              <span class="cap-full" lang="en"><b>Figure 2.</b> (a) A time step advances the state in five stages: Adams–Bashforth extrapolation of the explicit tendencies, the momentum predictor, the implicit free surface, the velocity correction and the tracer update; rounded white boxes are implicit solves. The controls c enter through the initialization and the forcing of stages 1 and 5, and purple arrows show the two ways in which network parameters enter: they set the initial fields or supply a term inside every step. In the reverse pass (orange) the adjoint state passes from step n+1 to step n through the reverse of each implicit solve. (b) A window of N steps: the forward integration adds each misfit to the cost function J at its observation time and stores the state at the start of each segment of s steps, on the GPU within a memory budget for the last segments and in host memory for the others; the reverse pass takes the segments from the last to the first, restores the stored state, recomputes the segment, passes the adjoint state back to its start while adding the misfit derivative at each observation, and releases the intermediates of the segment.</span>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="performance" class="panel" role="tabpanel" aria-labelledby="tab-performance">
+          <h2><span lang="zh-CN">性能</span><span lang="en">Performance</span></h2>
+          <div class="panel-text">
+            <p lang="zh-CN">在南海的 N×N×90 测速网格上，从 N=480 起，4 张 A800 GPU 的静力单步耗时都短于 MITgcm，为其最短耗时的 0.50 至 0.81 倍。960×960×90 网格上，MITgcm 用 768 个 Xeon Gold 6132 核每步 126 毫秒，4 张 GPU 每步 77 毫秒，速度是前者的 1.6 倍；非静力配置下，4 张 GPU 每步 232 毫秒，MITgcm 用 400 核每步 1421 毫秒。</p>
+            <p lang="en">On the N×N×90 benchmark grids of the South China Sea, four A800 GPUs take less time per hydrostatic step than MITgcm on every grid from N=480 on, 0.50 to 0.81 times its fastest time. On the 960×960×90 grid, MITgcm takes 126 ms per step on 768 Xeon Gold 6132 cores and four GPUs take 77 ms, 1.6 times as fast; in the nonhydrostatic configuration four GPUs take 232 ms against 1421 ms for MITgcm on 400 cores.</p>
+            <p lang="zh-CN">N=960 上从单卡到双卡、从双卡到四卡都快 1.8 倍，N=1120 起从双卡到四卡快 1.8 至 1.9 倍；4 张 GPU 能容纳直到 2400×2400×90 的网格。一次代价函数加梯度的耗时是正向积分的 2.9 至 5.4 倍。</p>
+            <p lang="en">At N=960 the step runs 1.8 times as fast from one GPU to two and again from two to four, and 1.8 to 1.9 times from two to four on the grids from N=1120 on; four GPUs hold grids up to 2400×2400×90. A cost function and its gradient cost 2.9 to 5.4 times the forward integration.</p>
+          </div>
+          <figure class="panel-fig" data-zoom="1200">
+            <button type="button" class="plate-open">
+              <picture lang="zh-CN"><source media="(max-width: 600px)" srcset="assets/fig-perf-zh-m.svg" width="560" height="1110"><img src="assets/fig-perf-zh.svg" width="1200" height="480" loading="lazy"
+                   alt="两幅图：左图 N×N×90 网格从 160 到 2400 的每步耗时，DEFgcm 静力用 1、2、4 张 GPU，非静力用 2、4 张 GPU，灰色为 MITgcm；右图 960×960×90 网格上 MITgcm 每秒步数随核数的阶梯，4 张 GPU 每步 77 ms，快于 MITgcm 测过的每一档核数。"></picture>
+              <picture lang="en"><source media="(max-width: 600px)" srcset="assets/fig-perf-en-m.svg" width="560" height="1110"><img src="assets/fig-perf-en.svg" width="1200" height="480" loading="lazy"
+                   alt="Two charts: time per step on N×N×90 grids from 160 to 2400 for DEFgcm hydrostatic on one, two and four GPUs and nonhydrostatic on two and four, with MITgcm in gray; and the MITgcm core ladder on the 960×960×90 grid in steps per second, where four GPUs at 77 ms per step are faster than every core count measured."></picture>
+              <span class="zoom-hint" aria-hidden="true"><span lang="zh-CN">放大</span><span lang="en">Enlarge</span></span>
+            </button>
+            <figcaption>
+              <span class="cap" lang="zh-CN"><b>图 3</b>　双精度正向积分的每步耗时。(a) N×N×90 网格；(b) N=960 时 MITgcm 的核数阶梯与 1、2、4 张 GPU 的 DEFgcm。</span>
+              <span class="cap" lang="en"><b>Figure 3.</b> Time per step of the forward integration in double precision. (a) N×N×90 grids; (b) the MITgcm core ladder at N=960 against DEFgcm on one, two and four GPUs.</span>
+              <span class="cap-full" lang="zh-CN"><b>图 3</b>　双精度正向积分的每步耗时。(a) N×N×90 网格从 N=160 到 2400：DEFgcm 静力配置用 1、2、4 张 A800 GPU，非静力配置用 2、4 张；灰线是 MITgcm 在测过的核数里最短的静力耗时，核数随网格在 640 至 896 之间，灰方块是非静力 MITgcm 用 400 核。(b) 960×960×90 网格上 MITgcm 的每秒步数随核数（每核一个进程）的变化，水平线是 DEFgcm 用 1、2、4 张 GPU 的每秒步数；MITgcm 最快的一档是 768 核每步 126 ms。DEFgcm 取 100 步里后 80 步的中位数，MITgcm 取 100 步平均，都不含输入输出；GPU 是一个节点上经 NVLink 互连的 4 张 A800 80 GB，CPU 节点有两颗 14 核 Xeon Gold 6132。</span>
+              <span class="cap-full" lang="en"><b>Figure 3.</b> Time per step of the forward integration in double precision. (a) N×N×90 grids from N=160 to 2400: DEFgcm hydrostatic on one, two and four A800 GPUs and nonhydrostatic on two and four; in gray, the fastest hydrostatic MITgcm time of each grid over the tested core counts, 640 to 896 cores depending on the grid, and MITgcm nonhydrostatic on 400 cores. (b) The 960×960×90 grid: MITgcm steps per second against the number of cores, one process per core, and DEFgcm on one, two and four GPUs as horizontal lines; the fastest MITgcm point is 768 cores at 126 ms per step. DEFgcm times are medians of the last 80 of 100 steps and MITgcm times means over 100 steps, both excluding I/O; the GPUs are four NVLink-connected A800 80 GB in one node, and each CPU node holds two 14-core Xeon Gold 6132.</span>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="assimilation" class="panel" role="tabpanel" aria-labelledby="tab-assimilation">
+          <h2><span lang="zh-CN">四维变分同化</span><span lang="en">4D-Var data assimilation</span></h2>
+          <div class="panel-text">
+            <p lang="zh-CN">南海孪生试验：MITgcm 从 GLORYS 再分析起算得到真值，从 HYCOM 分析起算得到背景，DEFgcm 在 160×152×41 网格（含 KPP 和开边界）上同化从真值抽样加噪声的海面高度、海表温度和温盐剖面，同化窗 3 天，共 79 个窗口。</p>
+            <p lang="en">South China Sea twin experiments: MITgcm produces the truth from the GLORYS reanalysis and the background from the HYCOM analysis, and DEFgcm assimilates SSH, SST and temperature and salinity profiles drawn from the truth with noise, on a 160×152×41 grid with KPP and open boundaries, in 79 three-day windows.</p>
+            <p lang="zh-CN">窗口结束后第 3 天，预报误差 Q（温盐、流速和海面高度的归一化均方误差）的平均值由背景的 0.858 降到 4D-Var 的 0.505；按窗口计算，降幅平均为 40%，逐窗在 20% 至 57% 之间。初始时刻的分析增量与真实背景误差的相关系数中位数，海表温度为 0.85，温度为 0.67。</p>
+            <p lang="en">Three days after the window, the average forecast error Q (normalized mean-square error of temperature, salinity, velocity and SSH) falls from 0.858 for the background to 0.505 for 4D-Var; the reduction averages 40% and ranges from 20% to 57% in individual windows. The increments correlate with the true background error with median coefficients of 0.85 for SST and 0.67 for temperature.</p>
+          </div>
+          <figure class="panel-fig" data-zoom="1200">
+            <button type="button" class="plate-open">
+              <picture lang="zh-CN"><source media="(max-width: 600px)" srcset="assets/fig-da-zh-m.svg" width="560" height="1072"><img src="assets/fig-da-zh.svg" width="1200" height="563" loading="lazy"
+                   alt="左边的折线图是窗口开始到结束后 5 天的预报误差 Q，4D-Var 在每个时刻都低于背景，窗口结束后第 3 天为 0.505 对 0.858。右边四幅地图的上排是真值减背景的海表温度和海面高度，下排是 4D-Var 的分析增量，空间结构对应。"></picture>
+              <picture lang="en"><source media="(max-width: 600px)" srcset="assets/fig-da-en-m.svg" width="560" height="1072"><img src="assets/fig-da-en.svg" width="1200" height="563" loading="lazy"
+                   alt="Left: forecast error Q from the start of the window to 5 days after its end; 4D-Var is below the background at every time, 0.505 against 0.858 three days after the window. Right: four maps, truth minus background for SST and SSH on top and the 4D-Var increments below, with matching spatial structure."></picture>
+              <span class="zoom-hint" aria-hidden="true"><span lang="zh-CN">放大</span><span lang="en">Enlarge</span></span>
+            </button>
+            <figcaption>
+              <span class="cap" lang="zh-CN"><b>图 4</b>　(a) 窗口结束后的预报误差 Q，79 个窗口平均；(b) 一个测试窗口的真值减背景（上）与 4D-Var 增量（下）。</span>
+              <span class="cap" lang="en"><b>Figure 4.</b> (a) Forecast error Q after the end of the window, mean of 79 windows; (b) truth minus background (top) and the 4D-Var increment (bottom) in a test window.</span>
+              <span class="cap-full" lang="zh-CN"><b>图 4</b>　(a) 预报误差 Q（温度、盐度、流速和海面高度的归一化均方误差）随窗口结束后时间的变化，79 个窗口平均：背景预报、由 4D-Var 分析场起报的预报，以及把窗口结束时刻的真值固定不动的持续性预报，后者度量预报期间海洋状态本身变化了多少。灰区是 3 天同化窗，−3 天处是初始状态的误差。由真值初始场起报的预报 Q 在每个窗口都低于 10⁻⁵，未画出。(b) 2022 年 1 月 20 日起的测试窗口在初始时刻的海表温度和海面高度：上排真值减背景，下排 4D-Var 的分析增量，同列用同一色标；这个窗口的相关系数最接近 13 个测试窗口的中位数。</span>
+              <span class="cap-full" lang="en"><b>Figure 4.</b> (a) Forecast error Q (normalized mean-square error of temperature, salinity, velocity and SSH) against time after the end of the window, averaged over 79 windows: the background forecast, the forecast from the 4D-Var analysis, and persistence, which holds the true state at the end of the window fixed and so measures how much the ocean changes during the forecast. The gray band is the three-day assimilation window, and the values at −3 days are the errors of the initial states. The forecast from the true initial state is not drawn, because its Q stays below 10⁻⁵ in every window. (b) The test window starting on 20 January 2022 at its initial time: truth minus background for SST and SSH on top and the 4D-Var increments below, one colour scale per column; its correlations lie closest to the medians over the 13 test windows.</span>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="hybrid" class="panel" role="tabpanel" aria-labelledby="tab-hybrid">
+          <h2><span lang="zh-CN">混合建模：经模式在线训练网络</span><span lang="en">Hybrid modeling: training networks online through the model</span></h2>
+          <div class="panel-text">
+            <p lang="zh-CN">网络读入一个窗口的观测新息（观测相对背景轨迹的偏差）、背景状态和背景处的梯度，输出初始场。在线训练以该窗口的 4D-Var 代价函数为损失，梯度经 DEFgcm 的反向积分传到网络参数，不需要目标分析场；训练好后，每个窗口只需算一次代价函数及其梯度，不再做极小化。</p>
+            <p lang="en">A network maps the innovations of a window's observations against the background trajectory, the background state and the gradient at the background to the initial state. Online training uses the window's 4D-Var cost function as the loss, whose gradient reaches the network parameters through the reverse integration of DEFgcm, so no target analyses are needed; once trained, the network needs one evaluation of the cost function and its gradient per window instead of a minimization.</p>
+            <p lang="zh-CN">在训练期之后的 13 个测试窗口上，网络补上背景与 4D-Var 预报误差之差的 81%，逐窗为 72% 至 93%；同样代价下沿负梯度按拟合系数走一步，只补上 44%。</p>
+            <p lang="en">On the 13 test windows after the training period, the network closes 81% of the gap in forecast error between the background and 4D-Var, 72% to 93% in individual windows; a scaled step along the negative gradient at the same cost closes 44%.</p>
+            <p lang="zh-CN">在窗口结束后第 3 天的平均预报误差相同时，网络生成分析场的速度是 4D-Var 的 11.4 倍。</p>
+            <p lang="en">At the same mean forecast error three days after the window, the network produces an analysis 11.4 times as fast as 4D-Var.</p>
+            <p lang="zh-CN">同一反向积分也能对时间步内部的网络求导：一个有 1282 个权重、每步加上动量倾向的逐格点多层感知机，梯度与中心差分的相对差为 1×10⁻⁶ 至 2×10⁻⁶，加上网络后一次梯度计算只多用 8% 的时间。</p>
+            <p lang="en">The same reverse integration differentiates networks inside the time steps: for a pointwise perceptron of 1,282 weights that adds a momentum tendency at every step, the gradient agrees with central differences to a relative 1×10⁻⁶ to 2×10⁻⁶, and the network adds 8% to the time of a gradient evaluation.</p>
+          </div>
+          <div class="panel-fig">
+            <table class="results">
+              <caption>
+                <span lang="zh-CN"><b>表 1</b>　13 个测试窗口的平均。补上的差距指背景到 4D-Var 在窗口结束后第 3 天的 Q 之差中被消除的份额；J/m 是分析场处每个同化观测的代价。缩放梯度指沿背景处的负梯度走一步，步长系数在 2019 年 4 个训练窗口上拟合，和网络一样只需一次 J 及其梯度计算。</span>
+                <span lang="en"><b>Table 1.</b> Averages over the 13 test windows. The gap closed is the share of the difference in Q three days after the window between the background and 4D-Var that an analysis removes; J/m is the cost per assimilated observation at the analysis. The scaled gradient is one step along the negative gradient at the background with a factor fitted on four training windows of 2019; like the network, it needs one evaluation of J and its gradient.</span>
+              </caption>
+              <thead>
+                <tr>
+                  <th><span lang="zh-CN">分析场</span><span lang="en">Analysis</span></th>
+                  <th><span lang="zh-CN">第 3 天 Q</span><span lang="en">Q at 3&nbsp;d</span></th>
+                  <th><span lang="zh-CN">补上的差距</span><span lang="en">Gap closed</span></th>
+                  <th>J/m</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><span lang="zh-CN">背景</span><span lang="en">Background</span></td><td>1.019</td><td><span class="bar" style="--v:0"></span><span>0%</span></td><td>24.85</td></tr>
+                <tr><td><span lang="zh-CN">4D-Var，最多 30 次迭代</span><span lang="en">4D-Var, up to 30 iterations</span></td><td>0.525</td><td><span class="bar" style="--v:1"></span><span>100%</span></td><td>0.76</td></tr>
+                <tr class="hl"><td><span lang="zh-CN">在线训练的网络</span><span lang="en">Network trained online</span></td><td>0.618</td><td><span class="bar" style="--v:.81"></span><span>81%</span></td><td>1.76</td></tr>
+                <tr><td><span lang="zh-CN">缩放梯度</span><span lang="en">Scaled gradient</span></td><td>0.804</td><td><span class="bar" style="--v:.44"></span><span>44%</span></td><td>7.59</td></tr>
+              </tbody>
+            </table>
+            <figure class="timing-comparison">
+              <p class="timing-heading"><span lang="zh-CN">同等平均预报误差，11.4 倍速度</span><span lang="en">11.4× faster at the same mean forecast error</span></p>
+              <div class="timing-row timing-network">
+                <span><span lang="zh-CN">网络</span><span lang="en">Network</span></span>
+                <span class="timing-track" aria-hidden="true"><span class="timing-bar" style="--width:8.7845%"></span></span>
+                <span class="timing-value">98.5 s</span>
+              </div>
+              <div class="timing-row timing-fourdvar">
+                <span>4D-Var</span>
+                <span class="timing-track" aria-hidden="true"><span class="timing-bar" style="--width:100%"></span></span>
+                <span class="timing-value">1,121 s</span>
+              </div>
+              <figcaption>
+                <span lang="zh-CN"><b>图 5</b>　13 个测试窗口在窗口结束后第 3 天的平均 Q 为 0.618 时，一张 A800 上的平均分析耗时。4D-Var 的耗时在相邻迭代之间按平均 Q 插值。</span>
+                <span lang="en"><b>Figure 5.</b> Mean analysis time on one A800 at the same mean Q of 0.618 three days after the window, over 13 test windows. The 4D-Var time is interpolated between adjacent iterations in mean Q.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+      </div>
+
+      <footer class="end">
+        <p lang="zh-CN">实习和合作请联系 <a href="mailto:tanghy@idsse.ac.cn">tanghy@idsse.ac.cn</a>。</p>
+        <p lang="en">For internships or collaboration, contact <a href="mailto:tanghy@idsse.ac.cn">tanghy@idsse.ac.cn</a>.</p>
+        <p class="updated"><span lang="zh-CN">更新于 2026 年 11 月 3 日</span><span lang="en">Updated 3 November 2026</span></p>
+      </footer>
+    </main>
+  </div>
+  <dialog class="viewer" aria-labelledby="viewer-caption">
+    <div class="viewer-bar">
+      <button type="button" class="viewer-zoom" aria-pressed="false">
+        <span class="hint-fit"><span lang="zh-CN">放大细节</span><span lang="en">Show detail</span></span>
+        <span class="hint-zoom"><span lang="zh-CN">缩回全图（放大后可滚动查看）</span><span lang="en">Fit to window (scroll while zoomed)</span></span>
+      </button>
+      <button type="button" class="viewer-close"><span lang="zh-CN">关闭</span><span lang="en">Close</span></button>
+    </div>
+    <div class="viewer-scroll">
+      <img alt="">
+    </div>
+    <p class="viewer-caption" id="viewer-caption"></p>
+  </dialog>
+</body>
+</html>
